@@ -1,0 +1,101 @@
+@mixin hoverAnimation($hoverColor) {
+  color: $hoverColor;
+  // background-position: 0 -100%;
+  border: 1px solid $hoverColor;
+  box-sizing: border-box;
+  background-color: #fff5e1;
+}
+
+@mixin slideAnimation($name, $from, $to) {
+  @keyframes #{$name} {
+    0% {
+      transform: translate3d($from, 0, 0);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translate3d($to, 0, 0);
+      opacity: 1;
+    }
+  }
+}
+
+@mixin colorChangeAnimation($name, $from, $to) {
+  @keyframes #{$name} {
+    0% {
+      color: $from;
+    }
+
+    100% {
+      color: $to;
+    }
+  }
+}
+
+@mixin scaleChangeAnimation($name, $from, $to) {
+  @keyframes #{$name} {
+    0% {
+      transform: scale($from);
+    }
+
+    100% {
+      transform: scale($to);
+    }
+  }
+}
+
+@mixin scaleTextUpAnimation($name, $from, $to) {
+  @keyframes #{$name} {
+    0% {
+      font-size: $from;
+    }
+
+    100% {
+      font-size: $to;
+    }
+  }
+}
+
+@mixin growDownAnimation {
+  @keyframes growDown {
+    0% {
+      transform: scaleY(0);
+    }
+
+    80% {
+      transform: scaleY(0.8);
+    }
+
+    100% {
+      transform: scaleY(1);
+    }
+  }
+}
+
+@mixin rotateAnimation($name, $from, $to) {
+  @keyframes #{$name} {
+    0% {
+      rotate: $from;
+    }
+
+    100% {
+      rotate: $to;
+    }
+  }
+}
+
+@mixin fadeInAnimation($name, $from, $to) {
+  // @keyframes #{$name} {
+  //   0% {
+  //     opacity: $from;
+  //   }
+
+  //   50% {
+  //     opacity: 0.5;
+  //   }
+
+  //   100% {
+  //     opacity: $to;
+  //   }
+  // }
+}

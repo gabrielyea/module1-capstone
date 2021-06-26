@@ -1,0 +1,67 @@
+$color_main_orange: #f55800;
+$color_main_black: #1c1a19;
+$color_dark_orange: #e05304;
+$color_main_text: white;
+$color_second_text: #f4f5f7;
+$color_third_text: #091e42;
+$color_fourth_text: #262626;
+$color_input_text: #979493;
+$color_area_text: #3c3a39;
+$color_back1: #1c1a19;
+$color_back2: #3c3a39;
+$main_title_font: 'Crete Round', sans-serif;
+
+%generalPadding {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@mixin sectionTitle($size: 56px, $height: 64px, $color: $color_main_orange) {
+  font-family: 'Crete Round', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin robotoTitle($sice, $height, $color) {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $sice;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin flexCenter($direction:column) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin projectParagraph($sice: 16px, $height: 24px, $color: $color_third_text) {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $sice;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin desktopResolution {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin customButtonIcon($path, $sizeX, $sizeY) {
+  background-image: url($path);
+  vertical-align: bottom;
+  display: inline-block;
+  width: $sizeX;
+  height: $sizeY;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+}

@@ -1,0 +1,9 @@
+@use './base' as *;
+@use './utils' as *;
+@use './layout' as *;
+@use './components/' as *;
+
+body {
+  width: 100%;
+  background-color: $color_main_text;
+}
