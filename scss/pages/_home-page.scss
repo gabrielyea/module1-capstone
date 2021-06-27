@@ -1,0 +1,97 @@
+@use '../themes/'as *;
+
+header {
+  @include doTheme($themes) {
+    $backgroundColor: themed('ligthBackgroundColor');
+
+    background-color: $backgroundColor;
+  }
+
+  h1 {
+    @include doTheme($themes) {
+      $text-color-main: themed('mainTextColor');
+      $main-font: themed('mainFont');
+
+      font-family: $main-font, 'Courier New', Courier, monospace;
+      color: $text-color-main;
+    }
+  }
+
+  #intro-msg {
+    @include doTheme($themes) {
+      $text-color-main: themed('mainTextColor');
+      $main-font: themed('mainFont');
+
+      font-family: $main-font, 'Courier New', Courier, monospace;
+      color: $text-color-main;
+    }
+  }
+
+  #event-desc {
+    @include doTheme($themes) {
+      $text-color-main: themed('secondTextColor');
+      $main-font: themed('secondFont');
+
+      font-family: $main-font, 'Courier New', Courier, monospace;
+    }
+  }
+
+  #event-info {
+    h2 {
+      @include doTheme($themes) {
+        $text-color-main: themed('darkTextColor');
+        $main-font: themed('mainFont');
+
+        font-family: $main-font, 'Courier New', Courier, monospace;
+        color: $text-color-main;
+      }
+    }
+
+    p {
+      @include doTheme($themes) {
+        $text-color-main: themed('secondTextColor');
+        $main-font: themed('mainFont');
+
+        font-family: $main-font, 'Courier New', Courier, monospace;
+      }
+    }
+  }
+}
+
+.program {
+  @include doTheme($themes) {
+    $backgroundColor: themed('darkBackgroundColor');
+
+    background-color: $backgroundColor;
+  }
+
+  h3 {
+    @include doTheme($themes) {
+      $text-color-main: themed('ligthTextColor');
+      $main-font: themed('mainFont');
+
+      font-family: $main-font, 'Courier New', Courier, monospace;
+      color: $text-color-main;
+    }
+  }
+
+  h4 {
+    @include doTheme($themes) {
+      $text-color-main: themed('mainTextColor');
+      $main-font: themed('mainFont');
+
+      font-family: $main-font, 'Courier New', Courier, monospace;
+      color: $text-color-main;
+    }
+  }
+
+  .activity-desc {
+    @include doTheme($themes) {
+      $text-color-main: themed('ligthTextColor');
+      $main-font: themed('secondFont');
+
+      font-family: $main-font, 'Courier New', Courier, monospace;
+      color: $text-color-main;
+    }
+  }
+}
