@@ -1,13 +1,12 @@
 .icon-1 {
-  width: 320px;
-  height: 320px;
-  background-image: url(/assets/Site-Icons-scalet.png);
-  transform: scale(0.25);
+  width: 64px;
+  height: 64px;
+  background-image: url(/assets/Site-Icons-scaled.png);
   animation: go 1s steps(10) infinite;
 }
 
 @keyframes go {
   100% {
-    background-position: -3200px 0;
+    background-position: -640px 0;
   }
 }
