@@ -5,7 +5,10 @@
 
 h1 {
   @include doTheme($themes) {
-    color: themed('textColor');
-    background-color: themed('backgroundColor');
+    $text-color-main: themed('textColor');
+    $backround-color-main: themed('backgroundColor');
+
+    color: $text-color-main;
+    background-color: $backround-color-main;
   }
 }

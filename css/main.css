@@ -17,13 +17,19 @@
     background-position: -3200px 0;
   }
 }
+nav {
+  height: 100px;
+  width: 100%;
+  background-color: blue;
+}
+
 .theme-light h1 {
   color: #408bbd;
   background-color: #fff;
 }
 .theme-dark h1 {
   color: #ddd;
-  background-color: #222;
+  background-color: orange;
 }
 
 /*# sourceMappingURL=main.css.map */
