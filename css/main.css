@@ -4,32 +4,153 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "Secret Mana";
+  src: url("/webfonts/secretOfMana/manaspc.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Ganon";
+  src: url("/webfonts/returnOfGanon/retganon.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Goose";
+  src: url("/webfonts/goose/Cocogoose.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/webfonts/lato/Lato-Regular.ttf") format("truetype");
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  padding: 0 20px;
+  align-items: flex-start;
+}
+header #event-desc {
+  font-size: 8px;
+  margin: 20px 0;
+}
+
+.program {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.program h3 {
+  margin: 50px;
+}
+.program ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+.program ul li {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 95%;
+  border-radius: 4px;
+  padding: 12px;
+  align-items: center;
+  font-size: small;
+}
+
 .icon-1 {
-  width: 320px;
-  height: 320px;
-  background-image: url(/assets/Site-Icons-scalet.png);
-  transform: scale(0.25);
+  width: 64px;
+  height: 64px;
+  background-image: url(/assets/Site-Icons-scaled.png);
   animation: go 1s steps(10) infinite;
 }
 
 @keyframes go {
   100% {
-    background-position: -3200px 0;
+    background-position: -640px 0;
   }
 }
 nav {
-  height: 100px;
+  height: 80px;
   width: 100%;
-  background-color: blue;
 }
 
-.theme-light h1 {
-  color: #408bbd;
-  background-color: #fff;
+.theme-pixel header {
+  background-color: #ececec;
 }
-.theme-dark h1 {
-  color: #ddd;
-  background-color: orange;
+.theme-normal header {
+  background-color: #ececec;
+}
+.theme-pixel header h1 {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  color: #ea4f36;
+}
+.theme-normal header h1 {
+  font-family: "Lato", "Courier New", Courier, monospace;
+  color: #ec5242;
+}
+.theme-pixel header #intro-msg {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  color: #ea4f36;
+}
+.theme-normal header #intro-msg {
+  font-family: "Lato", "Courier New", Courier, monospace;
+  color: #ec5242;
+}
+.theme-pixel header #event-desc {
+  font-family: "Ganon", "Courier New", Courier, monospace;
+}
+.theme-normal header #event-desc {
+  font-family: "Goose", "Courier New", Courier, monospace;
+}
+.theme-pixel header #event-info h2 {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  color: #2e222f;
+}
+.theme-normal header #event-info h2 {
+  font-family: "Lato", "Courier New", Courier, monospace;
+  color: #2e222f;
+}
+.theme-pixel header #event-info p {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+}
+.theme-normal header #event-info p {
+  font-family: "Lato", "Courier New", Courier, monospace;
+}
+
+.theme-pixel .program {
+  background-color: #2e222f;
+}
+.theme-normal .program {
+  background-color: #272a31;
+}
+.theme-pixel .program h3 {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  color: white;
+}
+.theme-normal .program h3 {
+  font-family: "Lato", "Courier New", Courier, monospace;
+  color: white;
+}
+.theme-pixel .program h4 {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  color: #ea4f36;
+}
+.theme-normal .program h4 {
+  font-family: "Lato", "Courier New", Courier, monospace;
+  color: #ec5242;
+}
+.theme-pixel .program .activity-desc {
+  font-family: "Ganon", "Courier New", Courier, monospace;
+  color: white;
+}
+.theme-normal .program .activity-desc {
+  font-family: "Goose", "Courier New", Courier, monospace;
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */
