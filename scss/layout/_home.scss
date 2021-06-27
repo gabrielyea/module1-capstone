@@ -1,2 +1,16 @@
 @use '../base' as *;
 @use '../themes' as *;
+@use '../utils/' as *;
+
+header {
+  @include flexCenter();
+
+  margin: 50px 0;
+  padding: 0 20px;
+  align-items: flex-start;
+
+  #event-desc {
+    font-size: 8px;
+    margin: 20px 0;
+  }
+}
