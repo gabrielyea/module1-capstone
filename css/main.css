@@ -1,9 +1,7 @@
-body {
-  background: #131415;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .icon-1 {
@@ -19,8 +17,13 @@ body {
     background-position: -3200px 0;
   }
 }
-body {
-  width: 100%;
+.theme-light h1 {
+  color: #408bbd;
+  background-color: #fff;
+}
+.theme-dark h1 {
+  color: #ddd;
+  background-color: #222;
 }
 
 /*# sourceMappingURL=main.css.map */

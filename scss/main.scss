@@ -1,9 +1,11 @@
-// @use './base' as *;
-// @use './utils' as *;
-// @use './layout' as *;
-@use './components/' as *;
+@use './base' as *;
+@use './layout' as *;
+@use './components' as *;
+@use './themes/' as *;
 
-body {
-  width: 100%;
-  // background-color: $color_main_text;
+h1 {
+  @include doTheme($themes) {
+    color: themed('textColor');
+    background-color: themed('backgroundColor');
+  }
 }
