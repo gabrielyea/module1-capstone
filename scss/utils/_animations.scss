@@ -99,3 +99,15 @@
   //   }
   // }
 }
+
+@mixin spriteAnimation($name, $x1Pos, $y1Pos, $x2Pos, $y2Pos) {
+  @keyframes #{$name} {
+    0% {
+      background-position: $x1Pos $y1Pos;
+    }
+
+    100% {
+      background-position: $x2Pos $y2Pos;
+    }
+  }
+}
