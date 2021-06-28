@@ -5,8 +5,11 @@
 header {
   @include flexCenter();
 
-  padding: 5em 2em;
+  padding: 2em 2em 4em 2em;
   align-items: flex-start;
+  background-image: url(../assets/background-mobile-1-scaled.png), url(../assets/background-mobile-2-scaled.png);
+  background-position: left bottom, right, top;
+  background-repeat: no-repeat;
 
   #event-desc {
     background-color: white;

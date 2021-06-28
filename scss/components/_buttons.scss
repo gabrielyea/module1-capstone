@@ -1,0 +1,16 @@
+@use '../utils' as *;
+
+.btn-1 {
+  background-color: $main-theme-color;
+  border-radius: 4px;
+  width: 60%;
+  border: none;
+  padding: 1em;
+  margin: 2em 0 0 0;
+}
+
+.burger {
+  background-image: url(../assets/burger-btn-scaled.png);
+  width: 64px;
+  height: 64px;
+}

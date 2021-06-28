@@ -1,10 +1,14 @@
 @use '../utils/'as *;
+@use '../components/' as *;
 
 .program {
   @include flexCenter();
 
+  background-image: url(../assets/tiled-background.png);
+  padding: 3em 0;
+
   h3 {
-    margin: 3em;
+    margin: 1em;
   }
 
   ul {

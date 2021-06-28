@@ -25,80 +25,16 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5em 2em;
+  padding: 2em 2em 4em 2em;
   align-items: flex-start;
+  background-image: url(../assets/background-mobile-1-scaled.png), url(../assets/background-mobile-2-scaled.png);
+  background-position: left bottom, right, top;
+  background-repeat: no-repeat;
 }
 header #event-desc {
   background-color: white;
   font-size: 1em;
   margin: 1em 0;
-}
-
-.program {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.program h3 {
-  margin: 3em;
-}
-.program ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-  list-style: none;
-  padding: 1em;
-}
-.program ul li {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  padding: 1em;
-  align-items: center;
-  font-size: small;
-  border-image: url(../assets/frame-1-scaled.png);
-  border-image-slice: 30;
-  border-image-width: 32px 32px;
-}
-.program ul li p {
-  color: #fb6b1d;
-  overflow-wrap: anywhere;
-}
-
-.speakers {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.speakers ul {
-  list-style: none;
-}
-.speakers ul li {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin: 1em;
-}
-.speakers ul li img {
-  border-image: url(../assets/frame-1-scaled.png);
-  border-image-slice: 30;
-  border-image-width: 32px 32px;
-  padding: 1em;
-}
-.speakers ul .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-image: url(../assets/frame-1-scaled.png);
-  border-image-slice: 30;
-  border-image-width: 32px 32px;
-  padding: 1em;
-  overflow-wrap: anywhere;
 }
 
 .icon-1 {
@@ -175,10 +111,102 @@ header #event-desc {
 nav {
   height: 80px;
   width: 100%;
+  background-image: url(../assets/background-mobile-nav.png), linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(0.5);
+}
+
+.btn-1 {
+  background-color: #ea4f36;
+  border-radius: 4px;
+  width: 60%;
+  border: none;
+  padding: 1em;
+  margin: 2em 0 0 0;
+}
+
+.burger {
+  background-image: url(../assets/burger-btn-scaled.png);
+  width: 64px;
+  height: 64px;
+}
+
+.program {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/tiled-background.png);
+  padding: 3em 0;
+}
+.program h3 {
+  margin: 1em;
+}
+.program ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  list-style: none;
+  padding: 1em;
+}
+.program ul li {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 1em;
+  align-items: center;
+  font-size: small;
+  border-image: url(../assets/frame-1-scaled.png);
+  border-image-slice: 30;
+  border-image-width: 32px 32px;
+}
+.program ul li p {
+  color: #fb6b1d;
+  overflow-wrap: anywhere;
+}
+
+.speakers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.speakers h3 {
+  margin: 2em 0;
+}
+.speakers ul {
+  list-style: none;
+}
+.speakers ul li {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 1em;
+}
+.speakers ul li img {
+  border-image: url(../assets/frame-1-scaled.png);
+  border-image-slice: 30;
+  border-image-width: 32px 32px;
+  padding: 1em;
+}
+.speakers ul .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-image: url(../assets/frame-1-scaled.png);
+  border-image-slice: 30;
+  border-image-width: 32px 32px;
+  padding: 1em;
+  overflow-wrap: anywhere;
 }
 
 .theme-pixel header {
-  background-color: #d4d4d4;
+  background-color: #eeee;
 }
 .theme-normal header {
   background-color: white;
@@ -250,9 +278,17 @@ nav {
   font-family: "Lato", "Courier New", Courier, monospace;
   color: white;
 }
+.theme-pixel .program .btn-1 {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  color: white;
+}
+.theme-normal .program .btn-1 {
+  font-family: "Goose", "Courier New", Courier, monospace;
+  color: white;
+}
 
 .theme-pixel .speakers {
-  background-color: #d4d4d4;
+  background-color: #eeee;
 }
 .theme-normal .speakers {
   background-color: white;

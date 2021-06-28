@@ -94,6 +94,16 @@ header {
       color: $text-color-main;
     }
   }
+
+  .btn-1 {
+    @include doTheme($themes) {
+      $text-color-main: themed('ligthTextColor');
+      $main-font: themed('mainFont');
+
+      font-family: $main-font, 'Courier New', Courier, monospace;
+      color: $text-color-main;
+    }
+  }
 }
 
 .speakers {
