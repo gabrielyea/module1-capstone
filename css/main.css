@@ -6,19 +6,19 @@
 
 @font-face {
   font-family: "Secret Mana";
-  src: url("../../webfonts/secretOfMana/manaspc.ttf") format("truetype");
+  src: url("../webfonts/secretOfMana/manaspc.ttf") format("truetype");
 }
 @font-face {
   font-family: "Ganon";
-  src: url("../../webfonts/returnOfGanon/retganon.ttf") format("truetype");
+  src: url("../webfonts/returnOfGanon/retganon.ttf") format("truetype");
 }
 @font-face {
   font-family: "Goose";
-  src: url("../../webfonts/goose/Cocogoose.ttf") format("truetype");
+  src: url("../webfonts/goose/Cocogoose.ttf") format("truetype");
 }
 @font-face {
   font-family: "Lato";
-  src: url("../../webfonts/lato/Lato-Regular.ttf") format("truetype");
+  src: url("../webfonts/lato/Lato-Regular.ttf") format("truetype");
 }
 header {
   display: flex;
@@ -65,7 +65,7 @@ header #event-desc {
 .icon-1 {
   width: 64px;
   height: 64px;
-  background-image: url(../../assets/Site-Icons-scaled.png);
+  background-image: url(../assets/Site-Icons-scaled.png);
   animation: sprite1 1s steps(10) infinite;
 }
 @keyframes sprite1 {
@@ -79,7 +79,7 @@ header #event-desc {
 .icon-2 {
   width: 64px;
   height: 64px;
-  background-image: url(../../assets/Site-Icons-scaled.png);
+  background-image: url(../assets/Site-Icons-scaled.png);
   animation: sprite2 1s steps(10) infinite;
 }
 @keyframes sprite2 {
@@ -93,7 +93,7 @@ header #event-desc {
 .icon-3 {
   width: 64px;
   height: 64px;
-  background-image: url(../../assets/Site-Icons-scaled.png);
+  background-image: url(../assets/Site-Icons-scaled.png);
   animation: sprite3 1s steps(10) infinite;
 }
 @keyframes sprite3 {
@@ -107,7 +107,7 @@ header #event-desc {
 .icon-4 {
   width: 64px;
   height: 64px;
-  background-image: url(../../assets/Site-Icons-scaled.png);
+  background-image: url(../assets/Site-Icons-scaled.png);
   animation: sprite4 1s steps(10) infinite;
 }
 @keyframes sprite4 {
@@ -121,7 +121,7 @@ header #event-desc {
 .icon-5 {
   width: 64px;
   height: 64px;
-  background-image: url(../../assets/Site-Icons-scaled.png);
+  background-image: url(../assets/Site-Icons-scaled.png);
   animation: sprite5 1s steps(10) infinite;
 }
 @keyframes sprite5 {
