@@ -13,6 +13,10 @@
   src: url("../webfonts/returnOfGanon/retganon.ttf") format("truetype");
 }
 @font-face {
+  font-family: "Lunch";
+  src: url("../webfonts/lunchTime/lunchds.ttf") format("truetype");
+}
+@font-face {
   font-family: "Goose";
   src: url("../webfonts/goose/Cocogoose.ttf") format("truetype");
 }
@@ -155,7 +159,7 @@ nav {
 }
 .program ul li {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 2fr;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding: 1em;
@@ -204,6 +208,9 @@ nav {
   padding: 1em;
   overflow-wrap: anywhere;
 }
+.speakers ul .info p {
+  font-size: small;
+}
 
 .about {
   display: flex;
@@ -212,15 +219,59 @@ nav {
   align-items: center;
   align-items: center;
 }
-.about p {
+.about p,
+.about h1,
+.about h2 {
   text-align: center;
 }
-.about h1 {
+.about h2 {
+  margin-top: 4em;
+}
+.about #event-desc {
+  margin: 5em 0;
+}
+
+.other-events {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.other-events h3 {
+  text-align: center;
+}
+.other-events p {
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.other-events-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e222f;
+  padding: 4em;
+}
+.partners #partners {
+  color: white;
   text-align: center;
 }
 
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3em;
+}
+
 .theme-pixel p {
-  font-family: "Ganon", "Courier New", Courier, monospace;
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
 }
 .theme-normal p {
   font-family: "Lato", "Courier New", Courier, monospace;
@@ -230,7 +281,7 @@ nav {
 .theme-pixel h3,
 .theme-pixel h4,
 .theme-pixel h5 {
-  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  font-family: "Lunch", "Courier New", Courier, monospace;
   color: #2e222f;
 }
 .theme-normal h2,
@@ -248,7 +299,7 @@ nav {
   background-color: white;
 }
 .theme-pixel header h1 {
-  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  font-family: "Lunch", "Courier New", Courier, monospace;
   color: #ea4f36;
 }
 .theme-normal header h1 {
@@ -256,7 +307,7 @@ nav {
   color: #ec5242;
 }
 .theme-pixel header #intro-msg {
-  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  font-family: "Lunch", "Courier New", Courier, monospace;
   color: #ea4f36;
 }
 .theme-normal header #intro-msg {
@@ -264,13 +315,13 @@ nav {
   color: #ec5242;
 }
 .theme-pixel header #event-desc {
-  font-family: "Ganon", "Courier New", Courier, monospace;
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
 }
 .theme-normal header #event-desc {
   font-family: "Lato", "Courier New", Courier, monospace;
 }
 .theme-pixel header #event-info h2 {
-  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  font-family: "Lunch", "Courier New", Courier, monospace;
   color: #2e222f;
 }
 .theme-normal header #event-info h2 {
@@ -278,7 +329,7 @@ nav {
   color: #2e222f;
 }
 .theme-pixel header #event-info p {
-  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  font-family: "Lunch", "Courier New", Courier, monospace;
 }
 .theme-normal header #event-info p {
   font-family: "Goose", "Courier New", Courier, monospace;
@@ -291,7 +342,7 @@ nav {
   background-color: #272a31;
 }
 .theme-pixel .program h3 {
-  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  font-family: "Lunch", "Courier New", Courier, monospace;
   color: white;
 }
 .theme-normal .program h3 {
@@ -299,7 +350,7 @@ nav {
   color: white;
 }
 .theme-pixel .program h4 {
-  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  font-family: "Lunch", "Courier New", Courier, monospace;
   color: #ea4f36;
 }
 .theme-normal .program h4 {
@@ -307,7 +358,7 @@ nav {
   color: #ec5242;
 }
 .theme-pixel .program .activity-desc {
-  font-family: "Ganon", "Courier New", Courier, monospace;
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
   color: white;
 }
 .theme-normal .program .activity-desc {
@@ -315,7 +366,7 @@ nav {
   color: white;
 }
 .theme-pixel .program .btn-1 {
-  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  font-family: "Lunch", "Courier New", Courier, monospace;
   color: white;
 }
 .theme-normal .program .btn-1 {
@@ -330,7 +381,7 @@ nav {
   background-color: white;
 }
 .theme-pixel .speakers h3 {
-  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  font-family: "Lunch", "Courier New", Courier, monospace;
   color: #2e222f;
 }
 .theme-normal .speakers h3 {
@@ -338,7 +389,7 @@ nav {
   color: #2e222f;
 }
 .theme-pixel .speakers h4 {
-  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  font-family: "Lunch", "Courier New", Courier, monospace;
   color: #2e222f;
 }
 .theme-normal .speakers h4 {
@@ -346,7 +397,7 @@ nav {
   color: #2e222f;
 }
 .theme-pixel .speakers h5 {
-  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  font-family: "Lunch", "Courier New", Courier, monospace;
   color: #ea4f36;
 }
 .theme-normal .speakers h5 {
@@ -354,7 +405,7 @@ nav {
   color: #ec5242;
 }
 .theme-pixel .speakers .desc {
-  font-family: "Ganon", "Courier New", Courier, monospace;
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
   color: #2e222f;
 }
 .theme-normal .speakers .desc {

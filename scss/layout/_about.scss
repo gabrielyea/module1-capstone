@@ -5,11 +5,52 @@
 
   align-items: center;
 
-  & p {
+  & p,
+  h1,
+  h2 {
     text-align: center;
   }
 
-  & h1 {
+  h2 {
+    margin-top: 4em;
+  }
+
+  #event-desc {
+    margin: 5em 0;
+  }
+}
+
+.other-events {
+  @include flexCenter;
+
+  h3 {
     text-align: center;
   }
+
+  p {
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  &-img {
+    @include flexCenter;
+  }
+}
+
+.partners {
+  @include flexCenter;
+
+  background-color: $dark-background-color;
+  padding: 4em;
+
+  #partners {
+    color: white;
+    text-align: center;
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3em;
 }
