@@ -1,10 +1,12 @@
 @use '../utils'as *;
 
+$sprite-path: url(../../assets/Site-Icons-scaled.png);
+
 .icon {
   &-1 {
     width: 64px;
     height: 64px;
-    background-image: url(/assets/Site-Icons-scaled.png);
+    background-image: $sprite-path;
     animation: sprite1 1s steps(10) infinite;
 
     @include spriteAnimation("sprite1", 0, 0, -640px, 0);
@@ -13,7 +15,7 @@
   &-2 {
     width: 64px;
     height: 64px;
-    background-image: url(/assets/Site-Icons-scaled.png);
+    background-image: $sprite-path;
     animation: sprite2 1s steps(10) infinite;
 
     @include spriteAnimation("sprite2", 0, -64px, -640px, -64px);
@@ -22,7 +24,7 @@
   &-3 {
     width: 64px;
     height: 64px;
-    background-image: url(/assets/Site-Icons-scaled.png);
+    background-image: $sprite-path;
     animation: sprite3 1s steps(10) infinite;
 
     @include spriteAnimation("sprite3", 0, -128px, -640px, -128px);
@@ -31,7 +33,7 @@
   &-4 {
     width: 64px;
     height: 64px;
-    background-image: url(/assets/Site-Icons-scaled.png);
+    background-image: $sprite-path;
     animation: sprite4 1s steps(10) infinite;
 
     @include spriteAnimation("sprite4", 0, -192px, -640px, -192px);
@@ -40,7 +42,7 @@
   &-5 {
     width: 64px;
     height: 64px;
-    background-image: url(/assets/Site-Icons-scaled.png);
+    background-image: $sprite-path;
     animation: sprite5 1s steps(10) infinite;
 
     @include spriteAnimation("sprite5", 0, -192px, -640px, -192px);
