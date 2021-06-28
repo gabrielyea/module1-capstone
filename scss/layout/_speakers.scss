@@ -1,0 +1,29 @@
+@use '../utils/'as *;
+
+.speakers {
+  @include flexCenter;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      margin: 1em;
+
+      img {
+        @include pixelBorder;
+
+        padding: 1em;
+      }
+    }
+
+    .info {
+      @include flexCenter();
+      @include pixelBorder;
+
+      padding: 1em;
+      overflow-wrap: anywhere;
+    }
+  }
+}

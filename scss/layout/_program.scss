@@ -4,24 +4,32 @@
   @include flexCenter();
 
   h3 {
-    margin: 50px;
+    margin: 3em;
   }
 
   ul {
     @include flexCenter();
 
-    gap: 24px;
+    gap: 1em;
     list-style: none;
+    padding: 1em;
 
     li {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       background-color: rgba(255, 255, 255, 0.3);
-      width: 95%;
+      //width: 95%;
       border-radius: 4px;
-      padding: 12px;
+      padding: 1em;
       align-items: center;
       font-size: small;
+
+      @include pixelBorder;
+
+      p {
+        color: #fb6b1d;
+        overflow-wrap: anywhere;
+      }
     }
   }
 }

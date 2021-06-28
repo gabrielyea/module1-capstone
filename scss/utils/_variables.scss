@@ -6,6 +6,12 @@ $main_title_font: 'Crete Round', sans-serif;
   padding-right: 24px;
 }
 
+@mixin pixelBorder() {
+  border-image: url(../assets/frame-1-scaled.png);
+  border-image-slice: 30;
+  border-image-width: 32px 32px;
+}
+
 @mixin sectionTitle($size: 56px, $height: 64px, $color: $color_main_orange) {
   font-family: 'Crete Round', sans-serif;
   font-style: normal;

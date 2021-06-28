@@ -2,7 +2,7 @@
 
 header {
   @include doTheme($themes) {
-    $backgroundColor: themed('ligthBackgroundColor');
+    $backgroundColor: themed('backgroundColor');
 
     background-color: $backgroundColor;
   }
@@ -88,6 +88,54 @@ header {
   .activity-desc {
     @include doTheme($themes) {
       $text-color-main: themed('ligthTextColor');
+      $main-font: themed('secondFont');
+
+      font-family: $main-font, 'Courier New', Courier, monospace;
+      color: $text-color-main;
+    }
+  }
+}
+
+.speakers {
+  @include doTheme($themes) {
+    $backgroundColor: themed('backgroundColor');
+
+    background-color: $backgroundColor;
+  }
+
+  h3 {
+    @include doTheme($themes) {
+      $text-color-main: themed('darkTextColor');
+      $main-font: themed('mainFont');
+
+      font-family: $main-font, 'Courier New', Courier, monospace;
+      color: $text-color-main;
+    }
+  }
+
+  h4 {
+    @include doTheme($themes) {
+      $text-color-main: themed('darkTextColor');
+      $main-font: themed('mainFont');
+
+      font-family: $main-font, 'Courier New', Courier, monospace;
+      color: $text-color-main;
+    }
+  }
+
+  h5 {
+    @include doTheme($themes) {
+      $text-color-main: themed('mainTextColor');
+      $main-font: themed('mainFont');
+
+      font-family: $main-font, 'Courier New', Courier, monospace;
+      color: $text-color-main;
+    }
+  }
+
+  .desc {
+    @include doTheme($themes) {
+      $text-color-main: themed('darkTextColor');
       $main-font: themed('secondFont');
 
       font-family: $main-font, 'Courier New', Courier, monospace;
