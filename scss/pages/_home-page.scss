@@ -1,5 +1,27 @@
 @use '../themes/'as *;
 
+p {
+  @include doTheme($themes) {
+    $text-color-main: themed('secondTextColor');
+    $main-font: themed('secondFont');
+
+    font-family: $main-font, 'Courier New', Courier, monospace;
+  }
+}
+
+h2,
+h3,
+h4,
+h5 {
+  @include doTheme($themes) {
+    $text-color-main: themed('darkTextColor');
+    $main-font: themed('mainFont');
+
+    font-family: $main-font, 'Courier New', Courier, monospace;
+    color: $text-color-main;
+  }
+}
+
 header {
   @include doTheme($themes) {
     $backgroundColor: themed('backgroundColor');

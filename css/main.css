@@ -205,6 +205,42 @@ nav {
   overflow-wrap: anywhere;
 }
 
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+}
+.about p {
+  text-align: center;
+}
+.about h1 {
+  text-align: center;
+}
+
+.theme-pixel p {
+  font-family: "Ganon", "Courier New", Courier, monospace;
+}
+.theme-normal p {
+  font-family: "Lato", "Courier New", Courier, monospace;
+}
+
+.theme-pixel h2,
+.theme-pixel h3,
+.theme-pixel h4,
+.theme-pixel h5 {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  color: #2e222f;
+}
+.theme-normal h2,
+.theme-normal h3,
+.theme-normal h4,
+.theme-normal h5 {
+  font-family: "Goose", "Courier New", Courier, monospace;
+  color: #2e222f;
+}
+
 .theme-pixel header {
   background-color: #eeee;
 }
