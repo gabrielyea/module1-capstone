@@ -18,7 +18,7 @@
 }
 @font-face {
   font-family: "Goose";
-  src: url("../webfonts/goose/Cocogoose.ttf") format("truetype");
+  src: url("../webfonts/goose/cocogoose.regular.otf") format("truetype");
 }
 @font-face {
   font-family: "Lato";
@@ -38,14 +38,13 @@ header {
 header h1.text-clip {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../../assets/CloudsWIPBig.png");
-  filter: hue-rotate(170deg);
+  background-image: url("../../assets/texture_864w.jpg");
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
 header #event-desc {
-  background-color: white;
+  border: 2px solid white;
   font-size: 0.5em;
   margin: 1em 0;
 }
@@ -143,21 +142,51 @@ nav {
   margin: 2em 0 0 0;
 }
 
-.burger {
-  background-image: url(../assets/burger-btn-scaled.png);
-  width: 64px;
-  height: 64px;
-}
-
 hr {
   color: #ea4f36;
   width: 2em;
 }
 
-.theme-pixel .program-element {
-  border-image: url(../assets/frame-1-scaled.png);
-  border-image-slice: 30;
-  border-image-width: 32px 32px;
+.burger-container {
+  padding: 1em;
+  width: 24px;
+  height: 24px;
+}
+.burger-container .burger {
+  position: absolute;
+  background-color: grey;
+  width: 26px;
+  height: 5px;
+  top: 20px;
+  transition: all 1s ease;
+}
+.burger-container .burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 30px;
+  height: 5px;
+  background-color: grey;
+  transition: all 1s ease;
+}
+.burger-container .burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 30px;
+  height: 5px;
+  background-color: grey;
+  transition: all 1s ease;
+}
+.burger-container.show .burger {
+  background: transparent;
+  transform: rotate(360deg);
+}
+.burger-container.show .burger::before {
+  transform: translate(0, 8px) rotate(45deg);
+}
+.burger-container.show .burger::after {
+  transform: translate(0, -8px) rotate(-45deg);
 }
 
 .program {
@@ -165,7 +194,6 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../assets/tiled-background.png);
   padding: 3em 0;
 }
 .program h3 {
@@ -194,6 +222,19 @@ hr {
   overflow-wrap: anywhere;
   font-weight: bold;
   color: white;
+}
+
+.theme-pixel .program {
+  background-image: url(../assets/tiled-background.png);
+}
+.theme-pixel .program-element {
+  border-image: url(../assets/frame-1-scaled.png);
+  border-image-slice: 30;
+  border-image-width: 32px 32px;
+}
+
+.theme-normal .program {
+  background-image: url(../assets/tiled-background-2.png);
 }
 
 .theme-pixel .speaker-info {
@@ -322,6 +363,60 @@ footer {
   padding: 3em;
 }
 
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(0.8);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.mobile-menu {
+  display: none;
+  width: 100%;
+  height: 50em;
+  padding-top: 5em;
+  background-color: #3c3a39;
+  position: fixed;
+  z-index: 1;
+}
+.mobile-menu.show {
+  display: block;
+  animation: growDown 300ms ease-in-out;
+  transform-origin: top center;
+}
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+  list-style: none;
+  gap: 1em;
+}
+.mobile-menu ul li {
+  font-size: 2em;
+  color: #ea4f36;
+  width: 5em;
+  border-bottom: #ea4f36 solid 1px;
+  text-align: center;
+}
+.mobile-menu ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.theme-pixel .mobile-menu {
+  background-image: url(../assets/tiled-background.png);
+}
+
+.theme-normal .mobile-menu {
+  background-image: url(../assets/tiled-background-2.png);
+}
+
 .theme-pixel p {
   font-family: "Secret Mana", "Courier New", Courier, monospace;
 }
@@ -344,11 +439,18 @@ footer {
   color: #2e222f;
 }
 
+.theme-pixel .mobile-menu {
+  font-family: "Lunch";
+}
+.theme-normal .mobile-menu {
+  font-family: "Goose";
+}
+
 .theme-pixel header {
-  background-color: #eeee;
+  background-color: #f7f7f7;
 }
 .theme-normal header {
-  background-color: white;
+  background-color: #f7f7f7;
 }
 .theme-pixel header h1 {
   font-family: "Lunch", "Courier New", Courier, monospace;
@@ -435,10 +537,10 @@ footer {
 }
 
 .theme-pixel .speakers {
-  background-color: #eeee;
+  background-color: #f7f7f7;
 }
 .theme-normal .speakers {
-  background-color: white;
+  background-color: #f7f7f7;
 }
 .theme-pixel .speakers h3 {
   font-family: "Secret Mana", "Courier New", Courier, monospace;

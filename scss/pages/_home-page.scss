@@ -22,6 +22,14 @@ h5 {
   }
 }
 
+.mobile-menu {
+  @include doTheme($themes) {
+    $font: themed('mainFont');
+
+    font-family: $font;
+  }
+}
+
 header {
   @include doTheme($themes) {
     $backgroundColor: themed('backgroundColor');

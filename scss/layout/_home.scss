@@ -17,8 +17,8 @@ header {
 
       background-repeat: no-repeat;
       background-size: cover;
-      background-image: url("../../assets/CloudsWIPBig.png");
-      filter: hue-rotate(170deg);
+      background-image: url("../../assets/texture_864w.jpg");
+      //filter: hue-rotate(20deg);
       color: transparent;
       -webkit-background-clip: text;
       background-clip: $property;
@@ -26,7 +26,7 @@ header {
   }
 
   #event-desc {
-    background-color: white;
+    border: 2px solid white;
     font-size: 0.5em;
     margin: 1em 0;
   }

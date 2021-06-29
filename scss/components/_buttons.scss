@@ -9,13 +9,63 @@
   margin: 2em 0 0 0;
 }
 
-.burger {
-  background-image: url(../assets/burger-btn-scaled.png);
-  width: 64px;
-  height: 64px;
-}
+// .burger {
+//   background-image: url(../assets/burger-btn-scaled.png);
+//   width: 64px;
+//   height: 64px;
+// }
 
 hr {
   color: $main-theme-color;
   width: 2em;
+}
+
+.burger-container {
+  padding: 1em;
+  width: 24px;
+  height: 24px;
+
+  .burger {
+    position: absolute;
+    background-color: grey;
+    width: 26px;
+    height: 5px;
+    top: 20px;
+    transition: all 1s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      width: 30px;
+      height: 5px;
+      background-color: grey;
+      transition: all 1s ease;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      width: 30px;
+      height: 5px;
+      background-color: grey;
+      transition: all 1s ease;
+    }
+  }
+
+  &.show {
+    .burger {
+      background: transparent;
+      transform: rotate(360deg);
+
+      &::before {
+        transform: translate(0, 8px) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(0, -8px) rotate(-45deg);
+      }
+    }
+  }
 }
