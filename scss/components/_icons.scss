@@ -45,7 +45,7 @@ $sprite-path: url(../assets/Site-Icons-scaled.png);
     background-image: $sprite-path;
     animation: sprite5 1s steps(10) infinite;
 
-    @include spriteAnimation("sprite5", 0, -192px, -640px, -192px);
+    @include spriteAnimation("sprite5", 0, -256px, -640px, -256px);
   }
 }
 

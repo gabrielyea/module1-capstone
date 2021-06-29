@@ -1,6 +1,6 @@
-@use '../base' as *;
-@use '../themes' as *;
-@use '../utils/' as *;
+@use '../base'as *;
+@use '../themes'as *;
+@use '../utils/'as *;
 
 header {
   @include flexCenter();
@@ -11,9 +11,27 @@ header {
   background-position: left bottom, right, top;
   background-repeat: no-repeat;
 
+  h1 {
+    &.text-clip {
+      $property: text;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("../../assets/CloudsWIPBig.png");
+      filter: hue-rotate(170deg);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: $property;
+    }
+  }
+
   #event-desc {
     background-color: white;
-    font-size: 1em;
+    font-size: 0.5em;
     margin: 1em 0;
+  }
+
+  #event-info {
+    font-size: 0.8em;
   }
 }

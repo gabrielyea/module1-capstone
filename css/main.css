@@ -35,10 +35,22 @@ header {
   background-position: left bottom, right, top;
   background-repeat: no-repeat;
 }
+header h1.text-clip {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../assets/CloudsWIPBig.png");
+  filter: hue-rotate(170deg);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
 header #event-desc {
   background-color: white;
-  font-size: 1em;
+  font-size: 0.5em;
   margin: 1em 0;
+}
+header #event-info {
+  font-size: 0.8em;
 }
 
 .icon-1 {
@@ -105,10 +117,10 @@ header #event-desc {
 }
 @keyframes sprite5 {
   0% {
-    background-position: 0 -192px;
+    background-position: 0 -256px;
   }
   100% {
-    background-position: -640px -192px;
+    background-position: -640px -256px;
   }
 }
 
@@ -137,6 +149,17 @@ nav {
   height: 64px;
 }
 
+hr {
+  color: #ea4f36;
+  width: 2em;
+}
+
+.theme-pixel .program-element {
+  border-image: url(../assets/frame-1-scaled.png);
+  border-image-slice: 30;
+  border-image-width: 32px 32px;
+}
+
 .program {
   display: flex;
   flex-direction: column;
@@ -146,7 +169,7 @@ nav {
   padding: 3em 0;
 }
 .program h3 {
-  margin: 1em;
+  margin: 1em 0 0.5em 0;
 }
 .program ul {
   display: flex;
@@ -156,6 +179,7 @@ nav {
   gap: 1em;
   list-style: none;
   padding: 1em;
+  align-items: normal;
 }
 .program ul li {
   display: grid;
@@ -165,12 +189,36 @@ nav {
   padding: 1em;
   align-items: center;
   font-size: small;
+}
+.program ul li p {
+  overflow-wrap: anywhere;
+  font-weight: bold;
+  color: white;
+}
+
+.theme-pixel .speaker-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-image: url(../assets/frame-1-scaled.png);
+  border-image-slice: 30;
+  border-image-width: 32px 32px;
+  padding: 1em;
+  overflow-wrap: anywhere;
+}
+.theme-pixel .speaker-img {
   border-image: url(../assets/frame-1-scaled.png);
   border-image-slice: 30;
   border-image-width: 32px 32px;
 }
-.program ul li p {
-  color: #fb6b1d;
+
+.theme-normal .speaker-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
   overflow-wrap: anywhere;
 }
 
@@ -181,7 +229,7 @@ nav {
   align-items: center;
 }
 .speakers h3 {
-  margin: 2em 0;
+  margin: 2em 0 0.5em 0;
 }
 .speakers ul {
   list-style: none;
@@ -191,24 +239,27 @@ nav {
   grid-template-columns: 1fr 2fr;
   margin: 1em;
 }
-.speakers ul li img {
-  border-image: url(../assets/frame-1-scaled.png);
-  border-image-slice: 30;
-  border-image-width: 32px 32px;
+.speakers ul li .speaker-img {
   padding: 1em;
+  background-color: violet;
 }
-.speakers ul .info {
+.speakers ul .speaker-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-image: url(../assets/frame-1-scaled.png);
-  border-image-slice: 30;
-  border-image-width: 32px 32px;
+  align-items: flex-start;
   padding: 1em;
   overflow-wrap: anywhere;
 }
-.speakers ul .info p {
+.speakers ul .speaker-info h5 {
+  font-style: italic;
+}
+.speakers ul .speaker-info hr {
+  color: rgba(194, 194, 194, 0.5);
+  margin: 0.5em 0 1em 0;
+}
+.speakers ul .speaker-info p {
   font-size: small;
 }
 
@@ -307,6 +358,14 @@ footer {
   font-family: "Goose", "Courier New", Courier, monospace;
   color: #ec5242;
 }
+.theme-pixel header h1.text-clip {
+  font-family: "Lunch", "Courier New", Courier, monospace;
+  color: transparent;
+}
+.theme-normal header h1.text-clip {
+  font-family: "Goose", "Courier New", Courier, monospace;
+  color: transparent;
+}
 .theme-pixel header #intro-msg {
   font-family: "Lunch", "Courier New", Courier, monospace;
   color: #ea4f36;
@@ -330,10 +389,10 @@ footer {
   color: #2e222f;
 }
 .theme-pixel header #event-info p {
-  font-family: "Lunch", "Courier New", Courier, monospace;
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
 }
 .theme-normal header #event-info p {
-  font-family: "Goose", "Courier New", Courier, monospace;
+  font-family: "Lato", "Courier New", Courier, monospace;
 }
 
 .theme-pixel .program {
@@ -343,11 +402,11 @@ footer {
   background-color: #272a31;
 }
 .theme-pixel .program h3 {
-  font-family: "Lunch", "Courier New", Courier, monospace;
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
   color: white;
 }
 .theme-normal .program h3 {
-  font-family: "Goose", "Courier New", Courier, monospace;
+  font-family: "Lato", "Courier New", Courier, monospace;
   color: white;
 }
 .theme-pixel .program h4 {
@@ -382,27 +441,27 @@ footer {
   background-color: white;
 }
 .theme-pixel .speakers h3 {
-  font-family: "Lunch", "Courier New", Courier, monospace;
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
   color: #2e222f;
 }
 .theme-normal .speakers h3 {
-  font-family: "Goose", "Courier New", Courier, monospace;
+  font-family: "Lato", "Courier New", Courier, monospace;
   color: #2e222f;
 }
 .theme-pixel .speakers h4 {
-  font-family: "Lunch", "Courier New", Courier, monospace;
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
   color: #2e222f;
 }
 .theme-normal .speakers h4 {
-  font-family: "Goose", "Courier New", Courier, monospace;
+  font-family: "Lato", "Courier New", Courier, monospace;
   color: #2e222f;
 }
 .theme-pixel .speakers h5 {
-  font-family: "Lunch", "Courier New", Courier, monospace;
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
   color: #ea4f36;
 }
 .theme-normal .speakers h5 {
-  font-family: "Goose", "Courier New", Courier, monospace;
+  font-family: "Lato", "Courier New", Courier, monospace;
   color: #ec5242;
 }
 .theme-pixel .speakers .desc {

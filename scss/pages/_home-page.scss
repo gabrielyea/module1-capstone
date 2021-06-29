@@ -39,6 +39,16 @@ header {
     }
   }
 
+  h1.text-clip {
+    @include doTheme($themes) {
+      $text-color-main: themed('mainTextColor');
+      $main-font: themed('mainFont');
+
+      font-family: $main-font, 'Courier New', Courier, monospace;
+      color: transparent;
+    }
+  }
+
   #intro-msg {
     @include doTheme($themes) {
       $text-color-main: themed('mainTextColor');
@@ -72,7 +82,7 @@ header {
     p {
       @include doTheme($themes) {
         $text-color-main: themed('secondTextColor');
-        $main-font: themed('mainFont');
+        $main-font: themed('secondFont');
 
         font-family: $main-font, 'Courier New', Courier, monospace;
       }
@@ -90,7 +100,7 @@ header {
   h3 {
     @include doTheme($themes) {
       $text-color-main: themed('ligthTextColor');
-      $main-font: themed('mainFont');
+      $main-font: themed('secondFont');
 
       font-family: $main-font, 'Courier New', Courier, monospace;
       color: $text-color-main;
@@ -138,7 +148,7 @@ header {
   h3 {
     @include doTheme($themes) {
       $text-color-main: themed('darkTextColor');
-      $main-font: themed('mainFont');
+      $main-font: themed('secondFont');
 
       font-family: $main-font, 'Courier New', Courier, monospace;
       color: $text-color-main;
@@ -148,7 +158,7 @@ header {
   h4 {
     @include doTheme($themes) {
       $text-color-main: themed('darkTextColor');
-      $main-font: themed('mainFont');
+      $main-font: themed('secondFont');
 
       font-family: $main-font, 'Courier New', Courier, monospace;
       color: $text-color-main;
@@ -158,7 +168,7 @@ header {
   h5 {
     @include doTheme($themes) {
       $text-color-main: themed('mainTextColor');
-      $main-font: themed('mainFont');
+      $main-font: themed('secondFont');
 
       font-family: $main-font, 'Courier New', Courier, monospace;
       color: $text-color-main;

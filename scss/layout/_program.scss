@@ -1,6 +1,12 @@
 @use '../utils/'as *;
 @use '../components/' as *;
 
+.theme-pixel {
+  .program-element {
+    @include pixelBorder;
+  }
+}
+
 .program {
   @include flexCenter();
 
@@ -8,7 +14,7 @@
   padding: 3em 0;
 
   h3 {
-    margin: 1em;
+    margin: 1em 0 0.5em 0;
   }
 
   ul {
@@ -17,22 +23,21 @@
     gap: 1em;
     list-style: none;
     padding: 1em;
+    align-items: normal;
 
     li {
       display: grid;
       grid-template-columns: 1fr 1fr 2fr;
       background-color: rgba(255, 255, 255, 0.3);
-      //width: 95%;
       border-radius: 4px;
       padding: 1em;
       align-items: center;
       font-size: small;
 
-      @include pixelBorder;
-
       p {
-        color: #fb6b1d;
         overflow-wrap: anywhere;
+        font-weight: bold;
+        color: white;
       }
     }
   }

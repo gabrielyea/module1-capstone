@@ -1,10 +1,33 @@
 @use '../utils/'as *;
 
+.theme-pixel {
+  .speaker-info {
+    @include flexCenter();
+    @include pixelBorder;
+
+    padding: 1em;
+    overflow-wrap: anywhere;
+  }
+
+  .speaker-img {
+    @include pixelBorder;
+  }
+}
+
+.theme-normal {
+  .speaker-info {
+    @include flexCenter();
+
+    padding: 1em;
+    overflow-wrap: anywhere;
+  }
+}
+
 .speakers {
   @include flexCenter;
 
   h3 {
-    margin: 2em 0;
+    margin: 2em 0 0.5em 0;
   }
 
   ul {
@@ -15,19 +38,27 @@
       grid-template-columns: 1fr 2fr;
       margin: 1em;
 
-      img {
-        @include pixelBorder;
-
+      .speaker-img {
         padding: 1em;
+        background-color: violet;
       }
     }
 
-    .info {
+    .speaker-info {
       @include flexCenter();
-      @include pixelBorder;
 
+      align-items: flex-start;
       padding: 1em;
       overflow-wrap: anywhere;
+
+      h5 {
+        font-style: italic;
+      }
+
+      hr {
+        color: rgb(194, 194, 194, 0.5);
+        margin: 0.5em 0 1em 0;
+      }
 
       p {
         font-size: small;
