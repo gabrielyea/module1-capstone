@@ -1,39 +1,116 @@
-@use '../utils/' as *;
+@use '../utils/'as *;
+@use '../themes/'as *;
 
-.about {
+header {
+  &.about {
+    @include flexCenter;
+
+    align-items: center;
+
+    & p,
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 4em;
+    }
+
+    #event-desc {
+      margin: 5em 0;
+      padding: 1em;
+      background-color: white;
+      font-size: 0.8em;
+      border: solid rgb(0, 0, 0, 0.1) 1px;
+    }
+
+    .contact {
+      @include flexCenter;
+
+      p {
+        font-size: 0.8em;
+        text-align: center;
+      }
+
+      a {
+        text-align: center;
+        color: black;
+
+        @include doTheme($themes) {
+          $font: themed('secondFont');
+
+          font-family: $font;
+        }
+      }
+    }
+  }
+}
+
+.logo {
   @include flexCenter;
 
-  align-items: center;
+  padding: 5em 0;
 
-  & p,
-  h1,
-  h2 {
+  &-h2 {
     text-align: center;
   }
 
-  h2 {
-    margin-top: 4em;
-  }
-
-  #event-desc {
-    margin: 5em 0;
-  }
+  box-shadow: 0 2px 1px rgb(228, 223, 223);
 }
 
 .other-events {
   @include flexCenter;
 
+  padding: 2em 0;
+
   h3 {
     text-align: center;
   }
 
-  p {
+  &-p {
     text-align: center;
     overflow-wrap: anywhere;
+    font-size: 0.8em;
   }
 
   &-img {
     @include flexCenter;
+
+    list-style: none;
+
+    & li {
+      @include flexCenter;
+
+      margin: 1em;
+      width: 100%;
+
+      .other-events-h4 {
+        text-align: center;
+        color: white;
+        font-size: 1.2em;
+      }
+
+      .other-events-p {
+        font-size: 1em;
+        color: white;
+        font-weight: bold;
+      }
+
+      &#event-1 {
+        background-image: linear-gradient(rgb(238, 117, 17, 0.5), rgb(238, 117, 17, 0.5)), url(../assets/crowd-1.jpeg);
+        background-size: cover;
+        width: 300px;
+        height: 250px;
+      }
+
+      &#event-2 {
+        background-image: linear-gradient(rgb(238, 117, 17, 0.5), rgb(238, 117, 17, 0.5)), url(../assets/crowd-2.jpeg);
+        background-size: cover;
+        width: 300px;
+        height: 250px;
+      }
+    }
   }
 }
 
@@ -42,7 +119,7 @@
 
   background-color: $dark-background-color;
   padding: 4em;
-  margin: 4em 0 0 0;
+  margin: 0 0 0 0;
 
   #partners {
     color: white;

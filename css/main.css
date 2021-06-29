@@ -29,7 +29,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2em 2em 4em 2em;
+  padding: 10em 2em 4em 2em;
   align-items: flex-start;
   background-image: url(../assets/background-mobile-1-scaled.png), url(../assets/background-mobile-2-scaled.png);
   background-position: left bottom, right, top;
@@ -47,6 +47,7 @@ header #event-desc {
   border: 2px solid white;
   font-size: 0.5em;
   margin: 1em 0;
+  background-color: #f7f7f7;
 }
 header #event-info {
   font-size: 0.8em;
@@ -131,6 +132,7 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   filter: grayscale(0.5);
+  position: fixed;
 }
 
 .btn-1 {
@@ -139,12 +141,15 @@ nav {
   width: 60%;
   border: none;
   padding: 1em;
-  margin: 2em 0 0 0;
+  margin: 2em 0 2em 0;
 }
 
 hr {
   color: #ea4f36;
   width: 2em;
+  margin: 1em;
+  border-bottom: #ea4f36 2px solid;
+  border-top: none;
 }
 
 .burger-container {
@@ -194,7 +199,6 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3em 0;
 }
 .program h3 {
   margin: 1em 0 0.5em 0;
@@ -214,7 +218,6 @@ hr {
   grid-template-columns: 1fr 1fr 2fr;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  padding: 1em;
   align-items: center;
   font-size: small;
 }
@@ -222,6 +225,7 @@ hr {
   overflow-wrap: anywhere;
   font-weight: bold;
   color: white;
+  padding: 1em;
 }
 
 .theme-pixel .program {
@@ -311,23 +315,59 @@ hr {
   font-size: small;
 }
 
-.about {
+header.about {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-items: center;
 }
-.about p,
-.about h1,
-.about h2 {
+header.about p,
+header.about h1,
+header.about h2 {
   text-align: center;
 }
-.about h2 {
+header.about h2 {
   margin-top: 4em;
 }
-.about #event-desc {
+header.about #event-desc {
   margin: 5em 0;
+  padding: 1em;
+  background-color: white;
+  font-size: 0.8em;
+  border: solid rgba(0, 0, 0, 0.1) 1px;
+}
+header.about .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header.about .contact p {
+  font-size: 0.8em;
+  text-align: center;
+}
+header.about .contact a {
+  text-align: center;
+  color: black;
+}
+.theme-pixel header.about .contact a {
+  font-family: "Secret Mana";
+}
+.theme-normal header.about .contact a {
+  font-family: "Lato";
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5em 0;
+  box-shadow: 0 2px 1px #e4dfdf;
+}
+.logo-h2 {
+  text-align: center;
 }
 
 .other-events {
@@ -335,19 +375,52 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2em 0;
 }
 .other-events h3 {
   text-align: center;
 }
-.other-events p {
+.other-events-p {
   text-align: center;
   overflow-wrap: anywhere;
+  font-size: 0.8em;
 }
 .other-events-img {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  list-style: none;
+}
+.other-events-img li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  width: 100%;
+}
+.other-events-img li .other-events-h4 {
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+}
+.other-events-img li .other-events-p {
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
+}
+.other-events-img li#event-1 {
+  background-image: linear-gradient(rgba(238, 117, 17, 0.5), rgba(238, 117, 17, 0.5)), url(../assets/crowd-1.jpeg);
+  background-size: cover;
+  width: 300px;
+  height: 250px;
+}
+.other-events-img li#event-2 {
+  background-image: linear-gradient(rgba(238, 117, 17, 0.5), rgba(238, 117, 17, 0.5)), url(../assets/crowd-2.jpeg);
+  background-size: cover;
+  width: 300px;
+  height: 250px;
 }
 
 .partners {
@@ -357,7 +430,7 @@ hr {
   align-items: center;
   background-color: #2e222f;
   padding: 4em;
-  margin: 4em 0 0 0;
+  margin: 0 0 0 0;
 }
 .partners #partners {
   color: white;
@@ -580,6 +653,43 @@ footer {
 .theme-normal .speakers .desc {
   font-family: "Lato", "Courier New", Courier, monospace;
   color: #2e222f;
+}
+
+.theme-pixel .logo-h2 {
+  font-family: "Secret Mana";
+}
+.theme-normal .logo-h2 {
+  font-family: "Lato";
+}
+.logo-container {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.logo hr {
+  margin: 1em;
+}
+
+.theme-pixel .other-events-h3, .theme-pixel .other-events-p {
+  font-family: "Secret Mana";
+}
+.theme-normal .other-events-h3, .theme-normal .other-events-p {
+  font-family: "Lato";
+}
+
+.partners {
+  background-color: #292929;
+}
+.theme-pixel .partners-h3 {
+  font-family: "Secret Mana";
+}
+.theme-normal .partners-h3 {
+  font-family: "Lato";
+}
+
+.theme-pixel footer .footer-p {
+  font-family: "Secret Mana";
+}
+.theme-normal footer .footer-p {
+  font-family: "Lato";
 }
 
 /*# sourceMappingURL=main.css.map */

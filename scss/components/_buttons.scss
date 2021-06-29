@@ -1,4 +1,4 @@
-@use '../utils' as *;
+@use '../utils'as *;
 
 .btn-1 {
   background-color: $main-theme-color;
@@ -6,7 +6,7 @@
   width: 60%;
   border: none;
   padding: 1em;
-  margin: 2em 0 0 0;
+  margin: 2em 0 2em 0;
 }
 
 // .burger {
@@ -18,6 +18,9 @@
 hr {
   color: $main-theme-color;
   width: 2em;
+  margin: 1em;
+  border-bottom: $main-theme-color 2px solid;
+  border-top: none;
 }
 
 .burger-container {

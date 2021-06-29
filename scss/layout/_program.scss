@@ -4,8 +4,6 @@
 .program {
   @include flexCenter();
 
-  padding: 3em 0;
-
   h3 {
     margin: 1em 0 0.5em 0;
   }
@@ -23,7 +21,6 @@
       grid-template-columns: 1fr 1fr 2fr;
       background-color: rgba(255, 255, 255, 0.3);
       border-radius: 4px;
-      padding: 1em;
       align-items: center;
       font-size: small;
 
@@ -31,6 +28,7 @@
         overflow-wrap: anywhere;
         font-weight: bold;
         color: white;
+        padding: 1em;
       }
     }
   }

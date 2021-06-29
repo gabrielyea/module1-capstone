@@ -1,4 +1,5 @@
 @use '../themes/'as *;
+@use '../utils/' as *;
 
 p {
   @include doTheme($themes) {
@@ -190,6 +191,57 @@ header {
 
       font-family: $main-font, 'Courier New', Courier, monospace;
       color: $text-color-main;
+    }
+  }
+}
+
+.logo {
+  &-h2 {
+    @include doTheme($themes) {
+      $font: themed('secondFont');
+
+      font-family: $font;
+    }
+  }
+
+  &-container {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  hr {
+    margin: 1em;
+  }
+}
+
+.other-events {
+  &-h3,
+  &-p {
+    @include doTheme($themes) {
+      $font: themed('secondFont');
+
+      font-family: $font;
+    }
+  }
+}
+
+.partners {
+  background-color: #292929;
+
+  &-h3 {
+    @include doTheme($themes) {
+      $font: themed('secondFont');
+
+      font-family: $font;
+    }
+  }
+}
+
+footer {
+  .footer-p {
+    @include doTheme($themes) {
+      $font: themed('secondFont');
+
+      font-family: $font;
     }
   }
 }
