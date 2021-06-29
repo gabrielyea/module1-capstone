@@ -12,6 +12,12 @@ $dark-background-color: #2e222f;
   border-image-width: 32px 32px;
 }
 
+@mixin chessBorder($slice: 8, $size: 16px) {
+  border-image: url(../assets/frame-2-scaled.png);
+  border-image-slice: $slice;
+  border-image-width: $size $size;
+}
+
 @mixin sectionTitle($size: 56px, $height: 64px, $color: $color_main_orange) {
   font-family: 'Crete Round', sans-serif;
   font-style: normal;

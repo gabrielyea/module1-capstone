@@ -21,6 +21,10 @@
     padding: 1em;
     overflow-wrap: anywhere;
   }
+
+  .speaker-img {
+    @include chessBorder(8, 16px);
+  }
 }
 
 .speakers {
@@ -36,11 +40,13 @@
     li {
       display: grid;
       grid-template-columns: 1fr 2fr;
-      margin: 1em;
+      grid-template-rows: 128px;
+      margin: 0.5em;
 
       .speaker-img {
         padding: 1em;
-        background-color: violet;
+        width: 100%;
+        height: 100%;
       }
     }
 
@@ -57,7 +63,7 @@
 
       hr {
         color: rgb(194, 194, 194, 0.5);
-        margin: 0.5em 0 1em 0;
+        margin: 0.5em 0 0.5em 0;
       }
 
       p {
