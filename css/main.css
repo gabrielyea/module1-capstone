@@ -134,6 +134,7 @@ header #event-info p {
   height: 3vh;
   display: block;
   background-size: 50vh;
+  opacity: 0.5;
 }
 .logo-2 {
   background-position: -815px 0;
@@ -142,6 +143,7 @@ header #event-info p {
   height: 3vh;
   display: block;
   background-size: 50vh;
+  opacity: 0.5;
 }
 .logo-3 {
   background-position: -530px 0;
@@ -150,6 +152,7 @@ header #event-info p {
   height: 3vh;
   display: block;
   background-size: 50vh;
+  opacity: 0.5;
 }
 .logo-4 {
   background-position: -620px 0;
@@ -158,6 +161,7 @@ header #event-info p {
   height: 3vh;
   display: block;
   background-size: 50vh;
+  opacity: 0.5;
 }
 .logo-5 {
   background-position: -320px 0;
@@ -166,6 +170,7 @@ header #event-info p {
   height: 3vh;
   display: block;
   background-size: 50vh;
+  opacity: 0.5;
 }
 
 nav {
@@ -495,6 +500,7 @@ header.about .contact a {
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
+  gap: 2em;
 }
 
 footer {
