@@ -236,6 +236,7 @@ hr {
   background-image: url(../assets/tiled-background.png);
 }
 .theme-pixel .program-element {
+  border: solid transparent;
   border-image: url(../assets/frame-1-scaled.png);
   border-image-slice: 30;
   border-image-width: 32px 32px;
@@ -250,6 +251,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: solid transparent;
   border-image: url(../assets/frame-1-scaled.png);
   border-image-slice: 30;
   border-image-width: 32px 32px;
@@ -257,6 +259,7 @@ hr {
   overflow-wrap: anywhere;
 }
 .theme-pixel .speaker-img {
+  border: solid transparent;
   border-image: url(../assets/frame-1-scaled.png);
   border-image-slice: 30;
   border-image-width: 32px 32px;
@@ -271,6 +274,7 @@ hr {
   overflow-wrap: anywhere;
 }
 .theme-normal .speaker-img {
+  border: solid transparent;
   border-image: url(../assets/frame-2-scaled.png);
   border-image-slice: 8;
   border-image-width: 16px 16px;
