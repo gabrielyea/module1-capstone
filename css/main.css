@@ -38,7 +38,7 @@ header {
 header h1.text-clip {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../../assets/texture_864w.jpg");
+  background-image: url("../assets/texture_864w.jpg");
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
