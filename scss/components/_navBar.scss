@@ -1,3 +1,5 @@
+@use '../utils' as *;
+
 nav {
   height: 80px;
   width: 100%;
@@ -10,4 +12,44 @@ nav {
   filter: grayscale(0.5);
   position: fixed;
   z-index: 2;
+
+  #nav-logo {
+    display: none;
+  }
+
+  #nav-desktop-menu {
+    display: none;
+  }
+}
+
+@include desktopResolution {
+  nav {
+    @include flexCenter(row);
+
+    justify-content: space-around;
+    background-image: none;
+    background-color: white;
+    box-shadow: 2px 2px 5px grey;
+    filter: grayscale(0);
+
+    #burger {
+      display: none;
+    }
+
+    #nav-logo {
+      display: block;
+    }
+
+    #nav-desktop-menu {
+      display: block;
+      list-style: none;
+
+      @include flexCenter(row);
+
+      li {
+        padding: 1em;
+        font-weight: bold;
+      }
+    }
+  }
 }

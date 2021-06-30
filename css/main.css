@@ -35,6 +35,13 @@ header {
   background-position: left bottom, right, top;
   background-repeat: no-repeat;
 }
+@media only screen and (min-width: 768px) {
+  header {
+    padding: 10em 8em 8em 8em;
+    background-image: linear-gradient(to bottom, rgba(231, 231, 231, 0.568), white), url(../../assets/CloudsWIPBig.png);
+    background-size: cover;
+  }
+}
 header h1.text-clip {
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,11 +50,23 @@ header h1.text-clip {
   -webkit-background-clip: text;
   background-clip: text;
 }
+@media only screen and (min-width: 768px) {
+  header h1 {
+    font-size: 3em;
+  }
+}
 header #event-desc {
   border: 2px solid white;
   font-size: 0.5em;
   margin: 1em 0;
   background-color: #f7f7f7;
+}
+@media only screen and (min-width: 768px) {
+  header #event-desc {
+    font-size: 0.7em;
+    width: 70%;
+    padding: 2em 1em;
+  }
 }
 header #event-info {
   font-size: 0.8em;
@@ -191,7 +210,44 @@ nav {
   position: fixed;
   z-index: 2;
 }
+nav #nav-logo {
+  display: none;
+}
+nav #nav-desktop-menu {
+  display: none;
+}
 
+@media only screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    background-image: none;
+    background-color: white;
+    box-shadow: 2px 2px 5px grey;
+    filter: grayscale(0);
+  }
+  nav #burger {
+    display: none;
+  }
+  nav #nav-logo {
+    display: block;
+  }
+  nav #nav-desktop-menu {
+    display: block;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  nav #nav-desktop-menu li {
+    padding: 1em;
+    font-weight: bold;
+  }
+}
 .btn-1 {
   background-color: #ea4f36;
   border-radius: 4px;
@@ -421,6 +477,19 @@ header.about .contact a {
   font-family: "Lato";
 }
 
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1em;
+}
+footer .event-logo {
+  margin: auto;
+}
+footer .footer-p {
+  font-size: 0.7em;
+  margin: auto;
+}
+
 .logo {
   display: flex;
   flex-direction: column;
@@ -512,19 +581,6 @@ header.about .contact a {
   flex-wrap: wrap;
   list-style: none;
   gap: 1em 0.5em;
-}
-
-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 1em;
-}
-footer .event-logo {
-  margin: auto;
-}
-footer .footer-p {
-  font-size: 0.7em;
-  margin: auto;
 }
 
 @keyframes growDown {
@@ -791,6 +847,15 @@ footer .footer-p {
   color: #585858;
 }
 .theme-normal footer .footer-p {
+  font-family: "Lato";
+  color: #585858;
+}
+
+.theme-pixel #nav-desktop-menu {
+  font-family: "Secret Mana";
+  color: #585858;
+}
+.theme-normal #nav-desktop-menu {
   font-family: "Lato";
   color: #585858;
 }

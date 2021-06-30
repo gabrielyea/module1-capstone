@@ -54,7 +54,7 @@ $dark-background-color: #2e222f;
 }
 
 @mixin desktopResolution {
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 768px) {
     @content;
   }
 }
