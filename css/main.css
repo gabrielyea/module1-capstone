@@ -37,9 +37,9 @@ header {
 }
 @media only screen and (min-width: 768px) {
   header {
-    padding: 10em 8em 8em 8em;
     background-image: linear-gradient(to bottom, rgba(231, 231, 231, 0.568), white), url(../../assets/CloudsWIPBig.png);
     background-size: cover;
+    padding: 10em 12em 4em 12em;
   }
 }
 header h1.text-clip {
@@ -52,7 +52,7 @@ header h1.text-clip {
 }
 @media only screen and (min-width: 768px) {
   header h1 {
-    font-size: 3em;
+    font-size: 6em;
   }
 }
 header #event-desc {
@@ -63,16 +63,26 @@ header #event-desc {
 }
 @media only screen and (min-width: 768px) {
   header #event-desc {
-    font-size: 0.7em;
-    width: 70%;
+    font-size: 1em;
+    width: 60%;
     padding: 2em 1em;
   }
 }
 header #event-info {
-  font-size: 0.8em;
+  font-size: 1em;
 }
 header #event-info p {
+  font-size: 0.8em;
   font-weight: bold;
+}
+@media only screen and (min-width: 768px) {
+  header #event-info {
+    font-size: 2em;
+  }
+  header #event-info p {
+    font-size: 0.5em;
+    font-weight: bold;
+  }
 }
 
 .icon-1 {
@@ -256,6 +266,13 @@ nav #nav-desktop-menu {
   padding: 1em;
   margin: 2em 0 2em 0;
 }
+@media only screen and (min-width: 768px) {
+  .btn-1 {
+    background-color: transparent;
+    text-decoration: underline;
+    font-size: 1.5em;
+  }
+}
 
 hr {
   color: #ea4f36;
@@ -340,6 +357,33 @@ hr {
   color: white;
   padding: 1em;
 }
+@media only screen and (min-width: 768px) {
+  .program ul li {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+    align-items: center;
+    justify-items: center;
+    max-width: 300px;
+    height: 200px;
+  }
+  .program ul li p {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  .program ul li h4 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .program ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+  }
+}
 
 .theme-pixel .program {
   background-image: url(../assets/tiled-background.png);
@@ -385,8 +429,8 @@ hr {
 .theme-normal .speaker-img {
   border: solid transparent;
   border-image: url(../assets/frame-2-scaled.png);
-  border-image-slice: 8;
-  border-image-width: 16px 16px;
+  border-image-slice: 30;
+  border-image-width: 128px 128px;
 }
 
 .speakers {
@@ -403,8 +447,8 @@ hr {
 }
 .speakers ul li {
   display: grid;
-  grid-template-columns: 1.5fr 2fr;
-  grid-template-rows: 150px;
+  grid-template-columns: 192px 2fr;
+  grid-template-rows: 192px;
   margin: 0.5em;
 }
 .speakers ul li .speaker-img {
@@ -432,6 +476,13 @@ hr {
 }
 .speakers ul .speaker-info p {
   font-size: small;
+}
+@media only screen and (min-width: 768px) {
+  .speakers ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 }
 
 header.about {

@@ -23,7 +23,7 @@
   }
 
   .speaker-img {
-    @include chessBorder(8, 16px);
+    @include chessBorder(30, 128px);
   }
 }
 
@@ -39,8 +39,8 @@
 
     li {
       display: grid;
-      grid-template-columns: 1.5fr 2fr;
-      grid-template-rows: 150px;
+      grid-template-columns: 192px 2fr;
+      grid-template-rows: 192px;
       margin: 0.5em;
 
       .speaker-img {
@@ -73,6 +73,14 @@
       p {
         font-size: small;
       }
+    }
+  }
+
+  @include desktopResolution {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
     }
   }
 }

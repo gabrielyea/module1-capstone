@@ -7,6 +7,12 @@
   border: none;
   padding: 1em;
   margin: 2em 0 2em 0;
+
+  @include desktopResolution {
+    background-color: transparent;
+    text-decoration: underline;
+    font-size: 1.5em;
+  }
 }
 
 // .burger {

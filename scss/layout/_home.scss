@@ -12,11 +12,11 @@ header {
   background-repeat: no-repeat;
 
   @include desktopResolution {
-    padding: 10em 8em 8em 8em;
     background-image:
       linear-gradient(to bottom, rgba(231, 231, 231, 0.568), rgb(255, 255, 255)),
       url(../../assets/CloudsWIPBig.png);
     background-size: cover;
+    padding: 10em 12em 4em 12em;
   }
 
   h1 {
@@ -33,7 +33,7 @@ header {
     }
 
     @include desktopResolution {
-      font-size: 3em;
+      font-size: 6em;
     }
   }
 
@@ -44,17 +44,27 @@ header {
     background-color: #f7f7f7;
 
     @include desktopResolution {
-      font-size: 0.7em;
-      width: 70%;
+      font-size: 1em;
+      width: 60%;
       padding: 2em 1em;
     }
   }
 
   #event-info {
-    font-size: 0.8em;
+    font-size: 1em;
 
     p {
+      font-size: 0.8em;
       font-weight: bold;
+    }
+
+    @include desktopResolution {
+      font-size: 2em;
+
+      p {
+        font-size: 0.5em;
+        font-weight: bold;
+      }
     }
   }
 }
