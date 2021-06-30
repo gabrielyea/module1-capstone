@@ -13,7 +13,8 @@ header {
 
   @include desktopResolution {
     padding: 10em 8em 8em 8em;
-    background-image: linear-gradient(to bottom, rgba(231, 231, 231, 0.568), rgb(255, 255, 255)),
+    background-image:
+      linear-gradient(to bottom, rgba(231, 231, 231, 0.568), rgb(255, 255, 255)),
       url(../../assets/CloudsWIPBig.png);
     background-size: cover;
   }
