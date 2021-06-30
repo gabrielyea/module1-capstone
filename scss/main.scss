@@ -2,10 +2,4 @@
 @use './layout' as *;
 @use './components' as *;
 @use './themes/' as *;
-
-h1 {
-  @include doTheme($themes) {
-    color: themed('textColor');
-    background-color: themed('backgroundColor');
-  }
-}
+@use './pages/' as *;

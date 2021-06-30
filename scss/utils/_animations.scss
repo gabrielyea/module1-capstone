@@ -99,3 +99,31 @@
   //   }
   // }
 }
+
+@mixin spriteAnimation($name, $x1Pos, $y1Pos, $x2Pos, $y2Pos) {
+  @keyframes #{$name} {
+    0% {
+      background-position: $x1Pos $y1Pos;
+    }
+
+    100% {
+      background-position: $x2Pos $y2Pos;
+    }
+  }
+}
+
+@mixin spriteSheetElement($xPos, $yPos) {
+  background-position: $xPos $yPos;
+}
+
+@mixin randomColorRotation($name) {
+  @keyframes #{$name} {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+}

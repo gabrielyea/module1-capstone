@@ -1,19 +1,23 @@
-$color_main_orange: #f55800;
-$color_main_black: #1c1a19;
-$color_dark_orange: #e05304;
-$color_main_text: white;
-$color_second_text: #f4f5f7;
-$color_third_text: #091e42;
-$color_fourth_text: #262626;
-$color_input_text: #979493;
-$color_area_text: #3c3a39;
-$color_back1: #1c1a19;
-$color_back2: #3c3a39;
-$main_title_font: 'Crete Round', sans-serif;
+$main-theme-color: #ea4f36;
+$dark-background-color: #2e222f;
 
 %generalPadding {
   padding-left: 24px;
   padding-right: 24px;
+}
+
+@mixin pixelBorder() {
+  border: solid transparent; // need this to work on chorme!!!
+  border-image: url(../assets/frame-1-scaled.png);
+  border-image-slice: 30;
+  border-image-width: 32px 32px;
+}
+
+@mixin chessBorder($slice: 8, $size: 16px) {
+  border: solid transparent;
+  border-image: url(../assets/frame-2-scaled.png);
+  border-image-slice: $slice;
+  border-image-width: $size $size;
 }
 
 @mixin sectionTitle($size: 56px, $height: 64px, $color: $color_main_orange) {
@@ -42,7 +46,6 @@ $main_title_font: 'Crete Round', sans-serif;
 }
 
 @mixin projectParagraph($sice: 16px, $height: 24px, $color: $color_third_text) {
-  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: $sice;
@@ -51,7 +54,7 @@ $main_title_font: 'Crete Round', sans-serif;
 }
 
 @mixin desktopResolution {
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 768px) {
     @content;
   }
 }

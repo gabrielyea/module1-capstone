@@ -1,16 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Capstone 1 - Gabriel Rendon</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body class="theme-dark">
-    <h1>Hellooo</h1>
-    <!-- <div class="icon-1"></div> -->
-    <script type="module" src="scripts/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Capstone 1 - Gabriel Rendon</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="theme-normal">
+  <nav>
+    <div id="burger" class="burger-container">
+      <span class="burger"></span>
+    </div>
+    <div id="nav-logo" class="event-logo"></div>
+    <ul id="nav-desktop-menu">
+      <li>About</li>
+      <li>Program</li>
+      <li>Join</li>
+      <li>Sponsor</li>
+      <li>News</li>
+    </ul>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <ul id="mobile-menu-links">
+      <li id='stylefy'> <a href="#recent-works">Stylefy!!</a></li>
+      <li><a href="html/about.html">About</a></li>
+    </ul>
+  </div>
+
+  <header>
+    <p id="intro-msg">Welcome!!</p>
+    <h1 class="text-clip">
+      Pixel Art International Convention 2021.
+    </h1>
+    <p id="event-desc">A great place to learn about the latest techniques and practices in the industry!
+      Come and learn from your favorite artist and designers.</p>
+    <section id="event-info">
+      <h2> 2021.10.10 (FRI) - 23(MON) </h2>
+      <p> @ The convention center</p>
+    </section>
+  </header>
+
+  <section class="program">
+    <h3>Main program</h3>
+    <hr class="under-line">
+    <ul>
+      <li class="program-element">
+        <span class=icon-1></span>
+        <h4>Lecture</h4>
+        <p class="activity-desc">Learn about artist from all over the world.</p>
+      </li>
+      <li class="program-element">
+        <span class=icon-2></span>
+        <h4>Pixel art exhibition</h4>
+        <p class="activity-desc">Take a look at the most recent trends and works in the industry.</p>
+      </li>
+      <li class="program-element">
+        <span class=icon-3></span>
+        <h4>Forum</h4>
+        <p class="activity-desc">Share your thoughts and opinions with experts.</p>
+      </li>
+      <li class="program-element">
+        <span class=icon-4></span>
+        <h4>Network</h4>
+        <p class="activity-desc">Get a chance to meet new people and make friends in the industry.</p>
+      </li>
+      <li class="program-element">
+        <span class=icon-5></span>
+        <h4>Game Jam</h4>
+        <p class="activity-desc">Showcase your abilities by participating in our game jam.</p>
+      </li>
+    </ul>
+    <button class="btn-1">Join DA Conference!</button>
+  </section>
+
+  <section class="speakers">
+    <h3> Featured speakers</h3>
+    <hr>
+    <ul id="speaker-ul">
+      <template id="speaker-li">
+        <li>
+          <img class="speaker-img" src="./assets/person-1.jpeg" alt="speaker name photo">
+          <div class="speaker-info">
+            <h4 class="name">Speaker name</h4>
+            <h5 class="titles">Astronaut, Policeman bablabla</h5>
+            <hr class="hr-ligth">
+            <p class="desc">blablablablbalbablablbalbalbabalbalabalbalbalbalbalbabalba</p>
+          </div>
+        </li>
+      </template>   
+    </ul>
+  </section>
+
+  <!-- <div class="icon-1"></div> -->
+  <script type="module" src="scripts/main.js"></script>
+</body>
+
 </html>

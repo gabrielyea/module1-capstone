@@ -1,0 +1,51 @@
+@use '../utils/'as *;
+@use '../components/' as *;
+
+.program {
+  @include flexCenter();
+
+  h3 {
+    margin: 1em 0 0.5em 0;
+  }
+
+  ul {
+    @include flexCenter();
+
+    gap: 1em;
+    list-style: none;
+    padding: 1em;
+    align-items: normal;
+
+    li {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      align-items: center;
+      font-size: small;
+
+      p {
+        overflow-wrap: anywhere;
+        font-weight: bold;
+        color: white;
+        padding: 1em;
+      }
+    }
+  }
+}
+
+.theme-pixel {
+  .program {
+    background-image: url(../assets/tiled-background.png);
+  }
+
+  .program-element {
+    @include pixelBorder;
+  }
+}
+
+.theme-normal {
+  .program {
+    background-image: url(../assets/tiled-background-2.png);
+  }
+}

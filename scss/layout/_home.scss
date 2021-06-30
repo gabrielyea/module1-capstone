@@ -1,2 +1,60 @@
-@use '../base' as *;
-@use '../themes' as *;
+@use '../base'as *;
+@use '../themes'as *;
+@use '../utils/'as *;
+
+header {
+  @include flexCenter();
+
+  padding: 10em 2em 4em 2em;
+  align-items: flex-start;
+  background-image: url(../assets/background-mobile-1-scaled.png), url(../assets/background-mobile-2-scaled.png);
+  background-position: left bottom, right, top;
+  background-repeat: no-repeat;
+
+  @include desktopResolution {
+    padding: 10em 8em 8em 8em;
+    background-image:
+      linear-gradient(to bottom, rgba(231, 231, 231, 0.568), rgb(255, 255, 255)),
+      url(../../assets/CloudsWIPBig.png);
+    background-size: cover;
+  }
+
+  h1 {
+    &.text-clip {
+      $property: text;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("../assets/texture_864w.jpg");
+      //filter: hue-rotate(20deg);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: $property;
+    }
+
+    @include desktopResolution {
+      font-size: 3em;
+    }
+  }
+
+  #event-desc {
+    border: 2px solid white;
+    font-size: 0.5em;
+    margin: 1em 0;
+    background-color: #f7f7f7;
+
+    @include desktopResolution {
+      font-size: 0.7em;
+      width: 70%;
+      padding: 2em 1em;
+    }
+  }
+
+  #event-info {
+    font-size: 0.8em;
+
+    p {
+      font-weight: bold;
+    }
+  }
+}

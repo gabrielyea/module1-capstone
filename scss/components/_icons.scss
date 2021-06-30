@@ -1,13 +1,116 @@
-.icon-1 {
-  width: 320px;
-  height: 320px;
-  background-image: url(/assets/Site-Icons-scalet.png);
-  transform: scale(0.25);
-  animation: go 1s steps(10) infinite;
+@use '../utils'as *;
+
+$sprite-path: url(../assets/Site-Icons-scaled.png);
+$logos-sheet-path: url(../assets/LogoSpriteSheet.png);
+$logos-event: url(../assets/event-logo-scaled.png);
+
+.icon {
+  &-1 {
+    width: 64px;
+    height: 64px;
+    background-image: $sprite-path;
+    animation: sprite1 1s steps(10) infinite;
+
+    @include spriteAnimation("sprite1", 0, 0, -640px, 0);
+  }
+
+  &-2 {
+    width: 64px;
+    height: 64px;
+    background-image: $sprite-path;
+    animation: sprite2 1s steps(10) infinite;
+
+    @include spriteAnimation("sprite2", 0, -64px, -640px, -64px);
+  }
+
+  &-3 {
+    width: 64px;
+    height: 64px;
+    background-image: $sprite-path;
+    animation: sprite3 1s steps(10) infinite;
+
+    @include spriteAnimation("sprite3", 0, -128px, -640px, -128px);
+  }
+
+  &-4 {
+    width: 64px;
+    height: 64px;
+    background-image: $sprite-path;
+    animation: sprite4 1s steps(10) infinite;
+
+    @include spriteAnimation("sprite4", 0, -192px, -640px, -192px);
+  }
+
+  &-5 {
+    width: 64px;
+    height: 64px;
+    background-image: $sprite-path;
+    animation: sprite5 1s steps(10) infinite;
+
+    @include spriteAnimation("sprite5", 0, -256px, -640px, -256px);
+  }
 }
 
-@keyframes go {
-  100% {
-    background-position: -3200px 0;
+.logo {
+  &-1 {
+    @include spriteSheetElement(0, 0);
+
+    background-image: $logos-sheet-path;
+    width: 9vh;
+    height: 3vh;
+    display: block;
+    background-size: 50vh;
+    opacity: 0.5;
   }
+
+  &-2 {
+    @include spriteSheetElement(-815px, 0);
+
+    background-image: $logos-sheet-path;
+    width: 11vh;
+    height: 3vh;
+    display: block;
+    background-size: 50vh;
+    opacity: 0.5;
+  }
+
+  &-3 {
+    @include spriteSheetElement(-530px, 0);
+
+    background-image: $logos-sheet-path;
+    width: 12vh;
+    height: 3vh;
+    display: block;
+    background-size: 50vh;
+    opacity: 0.5;
+  }
+
+  &-4 {
+    @include spriteSheetElement(-620px, 0);
+
+    background-image: $logos-sheet-path;
+    width: 9vh;
+    height: 3vh;
+    display: block;
+    background-size: 50vh;
+    opacity: 0.5;
+  }
+
+  &-5 {
+    @include spriteSheetElement(-320px, 0);
+
+    background-image: $logos-sheet-path;
+    width: 6.8vh;
+    height: 3vh;
+    display: block;
+    background-size: 50vh;
+    opacity: 0.5;
+  }
+}
+
+.event-logo {
+  background-image: $logos-event;
+  width: 64px;
+  height: 64px;
+  background-size: 100%;
 }

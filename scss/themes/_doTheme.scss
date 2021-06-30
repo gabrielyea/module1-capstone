@@ -1,5 +1,7 @@
 @use './definitions';
 
+$theme-map: null;
+
 @mixin doTheme($themes: $themes) {
   @each $theme,
 

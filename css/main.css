@@ -4,26 +4,860 @@
   padding: 0;
 }
 
-.icon-1 {
-  width: 320px;
-  height: 320px;
-  background-image: url(/assets/Site-Icons-scalet.png);
-  transform: scale(0.25);
-  animation: go 1s steps(10) infinite;
+@font-face {
+  font-family: "Secret Mana";
+  src: url("../webfonts/secretOfMana/manaspc.ttf") format("truetype");
 }
-
-@keyframes go {
-  100% {
-    background-position: -3200px 0;
+@font-face {
+  font-family: "Ganon";
+  src: url("../webfonts/returnOfGanon/retganon.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lunch";
+  src: url("../webfonts/lunchTime/lunchds.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Goose";
+  src: url("../webfonts/goose/cocogoose.regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../webfonts/lato/Lato-Regular.ttf") format("truetype");
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10em 2em 4em 2em;
+  align-items: flex-start;
+  background-image: url(../assets/background-mobile-1-scaled.png), url(../assets/background-mobile-2-scaled.png);
+  background-position: left bottom, right, top;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    padding: 10em 8em 8em 8em;
+    background-image: linear-gradient(to bottom, rgba(231, 231, 231, 0.568), white), url(../../assets/CloudsWIPBig.png);
+    background-size: cover;
   }
 }
-.theme-light h1 {
-  color: #408bbd;
-  background-color: #fff;
+header h1.text-clip {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../assets/texture_864w.jpg");
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
-.theme-dark h1 {
-  color: #ddd;
-  background-color: #222;
+@media only screen and (min-width: 768px) {
+  header h1 {
+    font-size: 3em;
+  }
+}
+header #event-desc {
+  border: 2px solid white;
+  font-size: 0.5em;
+  margin: 1em 0;
+  background-color: #f7f7f7;
+}
+@media only screen and (min-width: 768px) {
+  header #event-desc {
+    font-size: 0.7em;
+    width: 70%;
+    padding: 2em 1em;
+  }
+}
+header #event-info {
+  font-size: 0.8em;
+}
+header #event-info p {
+  font-weight: bold;
+}
+
+.icon-1 {
+  width: 64px;
+  height: 64px;
+  background-image: url(../assets/Site-Icons-scaled.png);
+  animation: sprite1 1s steps(10) infinite;
+}
+@keyframes sprite1 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -640px 0;
+  }
+}
+.icon-2 {
+  width: 64px;
+  height: 64px;
+  background-image: url(../assets/Site-Icons-scaled.png);
+  animation: sprite2 1s steps(10) infinite;
+}
+@keyframes sprite2 {
+  0% {
+    background-position: 0 -64px;
+  }
+  100% {
+    background-position: -640px -64px;
+  }
+}
+.icon-3 {
+  width: 64px;
+  height: 64px;
+  background-image: url(../assets/Site-Icons-scaled.png);
+  animation: sprite3 1s steps(10) infinite;
+}
+@keyframes sprite3 {
+  0% {
+    background-position: 0 -128px;
+  }
+  100% {
+    background-position: -640px -128px;
+  }
+}
+.icon-4 {
+  width: 64px;
+  height: 64px;
+  background-image: url(../assets/Site-Icons-scaled.png);
+  animation: sprite4 1s steps(10) infinite;
+}
+@keyframes sprite4 {
+  0% {
+    background-position: 0 -192px;
+  }
+  100% {
+    background-position: -640px -192px;
+  }
+}
+.icon-5 {
+  width: 64px;
+  height: 64px;
+  background-image: url(../assets/Site-Icons-scaled.png);
+  animation: sprite5 1s steps(10) infinite;
+}
+@keyframes sprite5 {
+  0% {
+    background-position: 0 -256px;
+  }
+  100% {
+    background-position: -640px -256px;
+  }
+}
+
+.logo-1 {
+  background-position: 0 0;
+  background-image: url(../assets/LogoSpriteSheet.png);
+  width: 9vh;
+  height: 3vh;
+  display: block;
+  background-size: 50vh;
+  opacity: 0.5;
+}
+.logo-2 {
+  background-position: -815px 0;
+  background-image: url(../assets/LogoSpriteSheet.png);
+  width: 11vh;
+  height: 3vh;
+  display: block;
+  background-size: 50vh;
+  opacity: 0.5;
+}
+.logo-3 {
+  background-position: -530px 0;
+  background-image: url(../assets/LogoSpriteSheet.png);
+  width: 12vh;
+  height: 3vh;
+  display: block;
+  background-size: 50vh;
+  opacity: 0.5;
+}
+.logo-4 {
+  background-position: -620px 0;
+  background-image: url(../assets/LogoSpriteSheet.png);
+  width: 9vh;
+  height: 3vh;
+  display: block;
+  background-size: 50vh;
+  opacity: 0.5;
+}
+.logo-5 {
+  background-position: -320px 0;
+  background-image: url(../assets/LogoSpriteSheet.png);
+  width: 6.8vh;
+  height: 3vh;
+  display: block;
+  background-size: 50vh;
+  opacity: 0.5;
+}
+
+.event-logo {
+  background-image: url(../assets/event-logo-scaled.png);
+  width: 64px;
+  height: 64px;
+  background-size: 100%;
+}
+
+nav {
+  height: 80px;
+  width: 100%;
+  background-image: url(../assets/background-mobile-nav.png), linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(0.5);
+  position: fixed;
+  z-index: 2;
+}
+nav #nav-logo {
+  display: none;
+}
+nav #nav-desktop-menu {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    background-image: none;
+    background-color: white;
+    box-shadow: 2px 2px 5px grey;
+    filter: grayscale(0);
+  }
+  nav #burger {
+    display: none;
+  }
+  nav #nav-logo {
+    display: block;
+  }
+  nav #nav-desktop-menu {
+    display: block;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  nav #nav-desktop-menu li {
+    padding: 1em;
+    font-weight: bold;
+  }
+}
+.btn-1 {
+  background-color: #ea4f36;
+  border-radius: 4px;
+  width: 60%;
+  border: none;
+  padding: 1em;
+  margin: 2em 0 2em 0;
+}
+
+hr {
+  color: #ea4f36;
+  width: 2em;
+  margin: 1em;
+  border-bottom: #ea4f36 2px solid;
+  border-top: none;
+}
+
+.burger-container {
+  padding: 1em;
+  width: 50px;
+  height: 50px;
+}
+.burger-container .burger {
+  position: absolute;
+  background-color: grey;
+  width: 26px;
+  height: 5px;
+  top: 20px;
+  transition: all 1s ease;
+}
+.burger-container .burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 30px;
+  height: 5px;
+  background-color: grey;
+  transition: all 1s ease;
+}
+.burger-container .burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 30px;
+  height: 5px;
+  background-color: grey;
+  transition: all 1s ease;
+}
+.burger-container.show .burger {
+  background: transparent;
+  transform: rotate(360deg);
+}
+.burger-container.show .burger::before {
+  transform: translate(0, 8px) rotate(45deg);
+}
+.burger-container.show .burger::after {
+  transform: translate(0, -8px) rotate(-45deg);
+}
+
+.program {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.program h3 {
+  margin: 1em 0 0.5em 0;
+}
+.program ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  list-style: none;
+  padding: 1em;
+  align-items: normal;
+}
+.program ul li {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  align-items: center;
+  font-size: small;
+}
+.program ul li p {
+  overflow-wrap: anywhere;
+  font-weight: bold;
+  color: white;
+  padding: 1em;
+}
+
+.theme-pixel .program {
+  background-image: url(../assets/tiled-background.png);
+}
+.theme-pixel .program-element {
+  border: solid transparent;
+  border-image: url(../assets/frame-1-scaled.png);
+  border-image-slice: 30;
+  border-image-width: 32px 32px;
+}
+
+.theme-normal .program {
+  background-image: url(../assets/tiled-background-2.png);
+}
+
+.theme-pixel .speaker-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid transparent;
+  border-image: url(../assets/frame-1-scaled.png);
+  border-image-slice: 30;
+  border-image-width: 32px 32px;
+  padding: 1em;
+  overflow-wrap: anywhere;
+}
+.theme-pixel .speaker-img {
+  border: solid transparent;
+  border-image: url(../assets/frame-1-scaled.png);
+  border-image-slice: 30;
+  border-image-width: 32px 32px;
+}
+
+.theme-normal .speaker-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  overflow-wrap: anywhere;
+}
+.theme-normal .speaker-img {
+  border: solid transparent;
+  border-image: url(../assets/frame-2-scaled.png);
+  border-image-slice: 8;
+  border-image-width: 16px 16px;
+}
+
+.speakers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.speakers h3 {
+  margin: 2em 0 0.5em 0;
+}
+.speakers ul {
+  list-style: none;
+}
+.speakers ul li {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  grid-template-rows: 150px;
+  margin: 0.5em;
+}
+.speakers ul li .speaker-img {
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+}
+.speakers ul .speaker-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 0.5em;
+  overflow-wrap: anywhere;
+}
+.speakers ul .speaker-info h5 {
+  font-style: italic;
+}
+.speakers ul .speaker-info hr.hr-ligth {
+  color: rgba(194, 194, 194, 0.5);
+  margin: 0.25em 0 0.25em 0;
+  border-bottom: 1px solid;
+}
+.speakers ul .speaker-info p {
+  font-size: small;
+}
+
+header.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+}
+header.about p,
+header.about h1,
+header.about h2 {
+  text-align: center;
+}
+header.about h2 {
+  margin-top: 4em;
+}
+header.about #event-desc {
+  margin: 5em 0;
+  padding: 1em;
+  background-color: white;
+  font-size: 0.8em;
+  border: solid rgba(0, 0, 0, 0.1) 1px;
+}
+header.about .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header.about .contact p {
+  font-size: 0.8em;
+  text-align: center;
+}
+header.about .contact a {
+  text-align: center;
+  color: black;
+}
+.theme-pixel header.about .contact a {
+  font-family: "Secret Mana";
+}
+.theme-normal header.about .contact a {
+  font-family: "Lato";
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1em;
+}
+footer .event-logo {
+  margin: auto;
+}
+footer .footer-p {
+  font-size: 0.7em;
+  margin: auto;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5em 0;
+  box-shadow: 0 2px 1px #e4dfdf;
+}
+.logo-h2 {
+  text-align: center;
+}
+.logo .event-logo {
+  width: 128px;
+  height: 128px;
+}
+
+.other-events {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1em;
+}
+.other-events h3 {
+  text-align: center;
+}
+.other-events-p {
+  text-align: center;
+  overflow-wrap: anywhere;
+  font-size: 0.8em;
+}
+.other-events-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.other-events-img li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  width: 100%;
+}
+.other-events-img li .other-events-h4 {
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+}
+.other-events-img li .other-events-p {
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
+}
+.other-events-img li#event-1 {
+  background-image: linear-gradient(rgba(238, 117, 17, 0.5), rgba(238, 117, 17, 0.5)), url(../assets/crowd-1.jpeg);
+  background-size: cover;
+  width: 300px;
+  height: 250px;
+}
+.other-events-img li#event-2 {
+  background-image: linear-gradient(rgba(238, 117, 17, 0.5), rgba(238, 117, 17, 0.5)), url(../assets/crowd-2.jpeg);
+  background-size: cover;
+  width: 300px;
+  height: 250px;
+}
+
+.partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e222f;
+  padding: 4em;
+  margin: 0 0 0 0;
+}
+.partners #partners {
+  color: white;
+  text-align: center;
+}
+.partners ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1em 0.5em;
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(0.8);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.mobile-menu {
+  display: none;
+  width: 100%;
+  height: 50em;
+  padding-top: 5em;
+  background-color: #3c3a39;
+  position: fixed;
+  z-index: 1;
+}
+.mobile-menu.show {
+  display: block;
+  animation: growDown 300ms ease-in-out;
+  transform-origin: top center;
+}
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10em;
+  list-style: none;
+  gap: 1em;
+}
+.mobile-menu ul li {
+  font-size: 2em;
+  color: #ea4f36;
+  width: 5em;
+  border-bottom: #ea4f36 solid 1px;
+  text-align: center;
+}
+.mobile-menu ul li#stylefy {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../assets/texture_864w.jpg");
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: rot 1s infinite;
+}
+@keyframes rot {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.mobile-menu ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.theme-pixel .mobile-menu {
+  background-image: url(../assets/tiled-background.png);
+}
+
+.theme-normal .mobile-menu {
+  background-image: url(../assets/tiled-background-2.png);
+}
+
+.theme-pixel p {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+}
+.theme-normal p {
+  font-family: "Lato", "Courier New", Courier, monospace;
+}
+
+.theme-pixel h2,
+.theme-pixel h3,
+.theme-pixel h4,
+.theme-pixel h5 {
+  font-family: "Lunch", "Courier New", Courier, monospace;
+  color: #2e222f;
+}
+.theme-normal h2,
+.theme-normal h3,
+.theme-normal h4,
+.theme-normal h5 {
+  font-family: "Goose", "Courier New", Courier, monospace;
+  color: #2e222f;
+}
+
+.theme-pixel .mobile-menu {
+  font-family: "Lunch";
+}
+.theme-normal .mobile-menu {
+  font-family: "Goose";
+}
+
+.theme-pixel header {
+  background-color: #f7f7f7;
+}
+.theme-normal header {
+  background-color: #f7f7f7;
+}
+.theme-pixel header h1 {
+  font-family: "Lunch", "Courier New", Courier, monospace;
+  color: #ea4f36;
+}
+.theme-normal header h1 {
+  font-family: "Goose", "Courier New", Courier, monospace;
+  color: #ec5242;
+}
+.theme-pixel header h1.text-clip {
+  font-family: "Lunch", "Courier New", Courier, monospace;
+  color: transparent;
+}
+.theme-normal header h1.text-clip {
+  font-family: "Goose", "Courier New", Courier, monospace;
+  color: transparent;
+}
+.theme-pixel header #intro-msg {
+  font-family: "Lunch", "Courier New", Courier, monospace;
+  color: #ea4f36;
+}
+.theme-normal header #intro-msg {
+  font-family: "Goose", "Courier New", Courier, monospace;
+  color: #ec5242;
+}
+.theme-pixel header #event-desc {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+}
+.theme-normal header #event-desc {
+  font-family: "Lato", "Courier New", Courier, monospace;
+}
+.theme-pixel header #event-info h2 {
+  font-family: "Lunch", "Courier New", Courier, monospace;
+  color: #585858;
+}
+.theme-normal header #event-info h2 {
+  font-family: "Goose", "Courier New", Courier, monospace;
+  color: #585858;
+}
+.theme-pixel header #event-info p {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+}
+.theme-normal header #event-info p {
+  font-family: "Lato", "Courier New", Courier, monospace;
+}
+
+.theme-pixel .program {
+  background-color: #2e222f;
+}
+.theme-normal .program {
+  background-color: #272a31;
+}
+.theme-pixel .program h3 {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  color: white;
+}
+.theme-normal .program h3 {
+  font-family: "Lato", "Courier New", Courier, monospace;
+  color: white;
+}
+.theme-pixel .program h4 {
+  font-family: "Lunch", "Courier New", Courier, monospace;
+  color: #ea4f36;
+}
+.theme-normal .program h4 {
+  font-family: "Goose", "Courier New", Courier, monospace;
+  color: #ec5242;
+}
+.theme-pixel .program .activity-desc {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  color: white;
+}
+.theme-normal .program .activity-desc {
+  font-family: "Lato", "Courier New", Courier, monospace;
+  color: white;
+}
+.theme-pixel .program .btn-1 {
+  font-family: "Lunch", "Courier New", Courier, monospace;
+  color: white;
+}
+.theme-normal .program .btn-1 {
+  font-family: "Goose", "Courier New", Courier, monospace;
+  color: white;
+}
+
+.theme-pixel .speakers {
+  background-color: #f7f7f7;
+}
+.theme-normal .speakers {
+  background-color: #f7f7f7;
+}
+.theme-pixel .speakers h3 {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  color: #2e222f;
+}
+.theme-normal .speakers h3 {
+  font-family: "Lato", "Courier New", Courier, monospace;
+  color: #2e222f;
+}
+.theme-pixel .speakers h4 {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  color: #2e222f;
+}
+.theme-normal .speakers h4 {
+  font-family: "Lato", "Courier New", Courier, monospace;
+  color: #2e222f;
+}
+.theme-pixel .speakers h5 {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  color: #ea4f36;
+}
+.theme-normal .speakers h5 {
+  font-family: "Lato", "Courier New", Courier, monospace;
+  color: #ec5242;
+}
+.theme-pixel .speakers .desc {
+  font-family: "Secret Mana", "Courier New", Courier, monospace;
+  color: #2e222f;
+}
+.theme-normal .speakers .desc {
+  font-family: "Lato", "Courier New", Courier, monospace;
+  color: #2e222f;
+}
+
+.theme-pixel .logo-h2 {
+  font-family: "Secret Mana";
+}
+.theme-normal .logo-h2 {
+  font-family: "Lato";
+}
+.logo-container {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.logo hr {
+  margin: 1em;
+}
+
+.theme-pixel .other-events-h3, .theme-pixel .other-events-p {
+  font-family: "Secret Mana";
+}
+.theme-normal .other-events-h3, .theme-normal .other-events-p {
+  font-family: "Lato";
+}
+
+.partners {
+  background-color: #292929;
+}
+.theme-pixel .partners-h3 {
+  font-family: "Secret Mana";
+}
+.theme-normal .partners-h3 {
+  font-family: "Lato";
+}
+
+.theme-pixel footer .footer-p {
+  font-family: "Secret Mana";
+  color: #585858;
+}
+.theme-normal footer .footer-p {
+  font-family: "Lato";
+  color: #585858;
+}
+
+.theme-pixel #nav-desktop-menu {
+  font-family: "Secret Mana";
+  color: #585858;
+}
+.theme-normal #nav-desktop-menu {
+  font-family: "Lato";
+  color: #585858;
 }
 
 /*# sourceMappingURL=main.css.map */
