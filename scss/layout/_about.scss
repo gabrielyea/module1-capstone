@@ -47,6 +47,21 @@ header {
   }
 }
 
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1em;
+
+  .event-logo {
+    margin: auto;
+  }
+
+  & .footer-p {
+    font-size: 0.7em;
+    margin: auto;
+  }
+}
+
 .logo {
   @include flexCenter;
 
@@ -138,20 +153,5 @@ header {
     flex-wrap: wrap;
     list-style: none;
     gap: 1em 0.5em;
-  }
-}
-
-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 1em;
-
-  .event-logo {
-    margin: auto;
-  }
-
-  & .footer-p {
-    font-size: 0.7em;
-    margin: auto;
   }
 }
