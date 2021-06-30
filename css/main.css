@@ -173,6 +173,13 @@ header #event-info p {
   opacity: 0.5;
 }
 
+.event-logo {
+  background-image: url(../assets/event-logo-scaled.png);
+  width: 64px;
+  height: 64px;
+  background-size: 100%;
+}
+
 nav {
   height: 80px;
   width: 100%;
@@ -425,13 +432,17 @@ header.about .contact a {
 .logo-h2 {
   text-align: center;
 }
+.logo .event-logo {
+  width: 128px;
+  height: 128px;
+}
 
 .other-events {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2em 0;
+  padding: 2em 1em;
 }
 .other-events h3 {
   text-align: center;
@@ -500,13 +511,20 @@ header.about .contact a {
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
-  gap: 2em;
+  gap: 1em 0.5em;
 }
 
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 3em;
+  padding: 1em;
+}
+footer .event-logo {
+  margin: auto;
+}
+footer .footer-p {
+  font-size: 0.7em;
+  margin: auto;
 }
 
 @keyframes growDown {
@@ -539,7 +557,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 1em;
+  padding-top: 10em;
   list-style: none;
   gap: 1em;
 }
@@ -549,6 +567,23 @@ footer {
   width: 5em;
   border-bottom: #ea4f36 solid 1px;
   text-align: center;
+}
+.mobile-menu ul li#stylefy {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../assets/texture_864w.jpg");
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: rot 1s infinite;
+}
+@keyframes rot {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 .mobile-menu ul li a {
   text-decoration: none;
@@ -753,9 +788,11 @@ footer {
 
 .theme-pixel footer .footer-p {
   font-family: "Secret Mana";
+  color: #585858;
 }
 .theme-normal footer .footer-p {
   font-family: "Lato";
+  color: #585858;
 }
 
 /*# sourceMappingURL=main.css.map */

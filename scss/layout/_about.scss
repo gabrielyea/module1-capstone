@@ -56,13 +56,18 @@ header {
     text-align: center;
   }
 
+  & .event-logo {
+    width: 128px;
+    height: 128px;
+  }
+
   box-shadow: 0 2px 1px rgb(228, 223, 223);
 }
 
 .other-events {
   @include flexCenter;
 
-  padding: 2em 0;
+  padding: 2em 1em;
 
   h3 {
     text-align: center;
@@ -132,12 +137,21 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
-    gap: 2em;
+    gap: 1em 0.5em;
   }
 }
 
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 3em;
+  padding: 1em;
+
+  .event-logo {
+    margin: auto;
+  }
+
+  & .footer-p {
+    font-size: 0.7em;
+    margin: auto;
+  }
 }

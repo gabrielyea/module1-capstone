@@ -2,6 +2,7 @@
 
 $sprite-path: url(../assets/Site-Icons-scaled.png);
 $logos-sheet-path: url(../assets/LogoSpriteSheet.png);
+$logos-event: url(../assets/event-logo-scaled.png);
 
 .icon {
   &-1 {
@@ -105,4 +106,11 @@ $logos-sheet-path: url(../assets/LogoSpriteSheet.png);
     background-size: 50vh;
     opacity: 0.5;
   }
+}
+
+.event-logo {
+  background-image: $logos-event;
+  width: 64px;
+  height: 64px;
+  background-size: 100%;
 }

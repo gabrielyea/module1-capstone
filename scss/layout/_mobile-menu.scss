@@ -20,7 +20,7 @@
   ul {
     @include flexCenter;
 
-    padding-top: 1em;
+    padding-top: 10em;
     list-style: none;
     gap: 1em;
 
@@ -30,6 +30,21 @@
       width: 5em;
       border-bottom: $main-theme-color solid 1px;
       text-align: center;
+
+      &#stylefy {
+        $property: text;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("../assets/texture_864w.jpg");
+        //filter: hue-rotate(20deg);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: $property;
+        animation: rot 1s infinite;
+
+        @include randomColorRotation(rot);
+      }
 
       a {
         text-decoration: none;
