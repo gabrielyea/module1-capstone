@@ -55,44 +55,49 @@ $logos-sheet-path: url(../assets/LogoSpriteSheet.png);
     @include spriteSheetElement(0, 0);
 
     background-image: $logos-sheet-path;
-    width: 200px;
-    height: 64px;
+    width: 9vh;
+    height: 3vh;
     display: block;
+    background-size: 50vh;
   }
 
   &-2 {
-    @include spriteSheetElement(835px, 0);
+    @include spriteSheetElement(-815px, 0);
 
     background-image: $logos-sheet-path;
-    width: 200px;
-    height: 64px;
+    width: 11vh;
+    height: 3vh;
     display: block;
+    background-size: 50vh;
   }
 
   &-3 {
-    @include spriteSheetElement(600px, 0);
+    @include spriteSheetElement(-530px, 0);
 
     background-image: $logos-sheet-path;
-    width: 230px;
-    height: 64px;
+    width: 12vh;
+    height: 3vh;
     display: block;
+    background-size: 50vh;
   }
 
   &-4 {
-    @include spriteSheetElement(330px, 0);
+    @include spriteSheetElement(-620px, 0);
 
     background-image: $logos-sheet-path;
-    width: 200px;
-    height: 64px;
+    width: 9vh;
+    height: 3vh;
     display: block;
+    background-size: 50vh;
   }
 
   &-5 {
-    @include spriteSheetElement(130px, 0);
+    @include spriteSheetElement(-320px, 0);
 
     background-image: $logos-sheet-path;
-    width: 130px;
-    height: 64px;
+    width: 6.8vh;
+    height: 3vh;
     display: block;
+    background-size: 50vh;
   }
 }

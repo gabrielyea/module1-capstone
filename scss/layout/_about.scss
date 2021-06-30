@@ -127,6 +127,10 @@ header {
   }
 
   ul {
+    @include flexCenter;
+
+    flex-direction: row;
+    flex-wrap: wrap;
     list-style: none;
   }
 }

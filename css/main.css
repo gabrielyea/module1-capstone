@@ -130,37 +130,42 @@ header #event-info p {
 .logo-1 {
   background-position: 0 0;
   background-image: url(../assets/LogoSpriteSheet.png);
-  width: 200px;
-  height: 64px;
+  width: 9vh;
+  height: 3vh;
   display: block;
+  background-size: 50vh;
 }
 .logo-2 {
-  background-position: 835px 0;
+  background-position: -815px 0;
   background-image: url(../assets/LogoSpriteSheet.png);
-  width: 200px;
-  height: 64px;
+  width: 11vh;
+  height: 3vh;
   display: block;
+  background-size: 50vh;
 }
 .logo-3 {
-  background-position: 600px 0;
+  background-position: -530px 0;
   background-image: url(../assets/LogoSpriteSheet.png);
-  width: 230px;
-  height: 64px;
+  width: 12vh;
+  height: 3vh;
   display: block;
+  background-size: 50vh;
 }
 .logo-4 {
-  background-position: 330px 0;
+  background-position: -620px 0;
   background-image: url(../assets/LogoSpriteSheet.png);
-  width: 200px;
-  height: 64px;
+  width: 9vh;
+  height: 3vh;
   display: block;
+  background-size: 50vh;
 }
 .logo-5 {
-  background-position: 130px 0;
+  background-position: -320px 0;
   background-image: url(../assets/LogoSpriteSheet.png);
-  width: 130px;
-  height: 64px;
+  width: 6.8vh;
+  height: 3vh;
   display: block;
+  background-size: 50vh;
 }
 
 nav {
@@ -483,6 +488,12 @@ header.about .contact a {
   text-align: center;
 }
 .partners ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   list-style: none;
 }
 
