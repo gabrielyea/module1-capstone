@@ -19,7 +19,7 @@
 
   <div id="mobile-menu" class="mobile-menu">
     <ul id="mobile-menu-links">
-      <li> <a href="#recent-works">Portfolio</a></li>
+      <li id='stylefy'> <a href="#recent-works">Portfolio</a></li>
       <li><a href="#about-me-intro">About</a></li>
     </ul>
   </div>
@@ -32,8 +32,8 @@
     <p id="event-desc">Aliqua nulla est nisi amet ullamco occaecat cillum sint consequat. Magna ex officia ullamco elit
       ipsum laboris aliquip sint nostrud non dolor in duis.</p>
     <section id="event-info">
-      <h2> Hello hello hello </h2>
-      <p> blabl alablabla blablablablabla blablaa</p>
+      <h2> 2021.10.10 (FRI) - 23(MON) </h2>
+      <p> @ The convention center</p>
     </section>
   </header>
 
@@ -73,34 +73,18 @@
   <section class="speakers">
     <h3> Featured speakers</h3>
     <hr>
-    <ul>
-      <li>
-        <img class="speaker-img" src="./assets/person-1.jpeg" alt="speaker name photo">
-        <div class="speaker-info">
-          <h4 class="name">Speaker name</h4>
-          <h5 class="titles">Astronaut, Policeman bablabla</h5>
-          <hr>
-          <p class="desc">blablablablbalbablablbalbalbabalbalabalbalbalbalbalbabalba</p>
-        </div>
-      </li>
-      <li>
-        <img class="speaker-img" src="./assets/person-2.jpeg" alt="speaker name photo">
-        <div class="speaker-info">
-          <h4 class="name">Speaker name</h4>
-          <h5 class="titles">Astronaut, Policeman bablabla</h5>
-          <hr>
-          <p class="desc">blablablablbalbablablbalbalbabalbalabalbalbalbalbalbabalba</p>
-        </div>
-      </li>
-      <li>
-        <img class="speaker-img" src="./assets/person-3.jpeg" alt="speaker name photo">
-        <div class="speaker-info">
-          <h4 class="name">Speaker name</h4>
-          <h5 class="titles">Astronaut, Policeman bablabla</h5>
-          <hr>
-          <p class="desc">blablablablbalbablablbalbalbabalbalabalbalbalbalbalbabalba</p>
-        </div>
-      </li>
+    <ul id="speaker-ul">
+      <template id="speaker-li">
+        <li>
+          <img class="speaker-img" src="./assets/person-1.jpeg" alt="speaker name photo">
+          <div class="speaker-info">
+            <h4 class="name">Speaker name</h4>
+            <h5 class="titles">Astronaut, Policeman bablabla</h5>
+            <hr class="hr-ligth">
+            <p class="desc">blablablablbalbablablbalbalbabalbalabalbalbalbalbalbabalba</p>
+          </div>
+        </li>
+      </template>   
     </ul>
   </section>
 

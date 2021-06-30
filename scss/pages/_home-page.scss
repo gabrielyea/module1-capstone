@@ -80,7 +80,7 @@ header {
   #event-info {
     h2 {
       @include doTheme($themes) {
-        $text-color-main: themed('darkTextColor');
+        $text-color-main: themed('secondTextColor');
         $main-font: themed('mainFont');
 
         font-family: $main-font, 'Courier New', Courier, monospace;

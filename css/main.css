@@ -52,6 +52,9 @@ header #event-desc {
 header #event-info {
   font-size: 0.8em;
 }
+header #event-info p {
+  font-weight: bold;
+}
 
 .icon-1 {
   width: 64px;
@@ -133,6 +136,7 @@ nav {
   background-repeat: no-repeat;
   filter: grayscale(0.5);
   position: fixed;
+  z-index: 2;
 }
 
 .btn-1 {
@@ -154,8 +158,8 @@ hr {
 
 .burger-container {
   padding: 1em;
-  width: 24px;
-  height: 24px;
+  width: 50px;
+  height: 50px;
 }
 .burger-container .burger {
   position: absolute;
@@ -286,8 +290,8 @@ hr {
 }
 .speakers ul li {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 128px;
+  grid-template-columns: 1.5fr 2fr;
+  grid-template-rows: 150px;
   margin: 0.5em;
 }
 .speakers ul li .speaker-img {
@@ -301,15 +305,17 @@ hr {
   justify-content: center;
   align-items: center;
   align-items: flex-start;
-  padding: 1em;
+  justify-content: space-around;
+  padding: 0.5em;
   overflow-wrap: anywhere;
 }
 .speakers ul .speaker-info h5 {
   font-style: italic;
 }
-.speakers ul .speaker-info hr {
+.speakers ul .speaker-info hr.hr-ligth {
   color: rgba(194, 194, 194, 0.5);
-  margin: 0.5em 0 0.5em 0;
+  margin: 0.25em 0 0.25em 0;
+  border-bottom: 1px solid;
 }
 .speakers ul .speaker-info p {
   font-size: small;
@@ -564,11 +570,11 @@ footer {
 }
 .theme-pixel header #event-info h2 {
   font-family: "Lunch", "Courier New", Courier, monospace;
-  color: #2e222f;
+  color: #585858;
 }
 .theme-normal header #event-info h2 {
   font-family: "Goose", "Courier New", Courier, monospace;
-  color: #2e222f;
+  color: #585858;
 }
 .theme-pixel header #event-info p {
   font-family: "Secret Mana", "Courier New", Courier, monospace;

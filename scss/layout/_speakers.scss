@@ -39,8 +39,8 @@
 
     li {
       display: grid;
-      grid-template-columns: 1fr 2fr;
-      grid-template-rows: 128px;
+      grid-template-columns: 1.5fr 2fr;
+      grid-template-rows: 150px;
       margin: 0.5em;
 
       .speaker-img {
@@ -54,7 +54,8 @@
       @include flexCenter();
 
       align-items: flex-start;
-      padding: 1em;
+      justify-content: space-around;
+      padding: 0.5em;
       overflow-wrap: anywhere;
 
       h5 {
@@ -62,8 +63,11 @@
       }
 
       hr {
-        color: rgb(194, 194, 194, 0.5);
-        margin: 0.5em 0 0.5em 0;
+        &.hr-ligth {
+          color: rgb(194, 194, 194, 0.5);
+          margin: 0.25em 0 0.25em 0;
+          border-bottom: 1px solid;
+        }
       }
 
       p {
