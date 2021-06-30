@@ -11,6 +11,6 @@ window.addEventListener('load', () => {
 
   // if there is a place to place the speakers
   if (sFunctions.templateContainer != null) {
-    sFunctions.setSpeakerData();
+    sFunctions.createSpeakers();
   }
 });

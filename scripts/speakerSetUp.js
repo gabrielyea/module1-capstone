@@ -6,18 +6,18 @@ export default class SpeakerFunctions {
 
   templateContainer = document.getElementById('speaker-ul');
 
-  createSpeaker = () => {
-    Speakers.speakersList.forEach((speaker) => {
+  createSpeakers = () => {
+    Speakers.speakersList.forEach((speakerData) => {
       const clone = this.speakerTemplate.content.firstElementChild.cloneNode(true);
-      this.setSpeakerData(speaker);
+      this.setSpeakerData(clone, speakerData);
       this.templateContainer.appendChild(clone);
     });
   }
 
-  setSpeakerData = (speaker) => {
-    speaker.querySelector('.name').innerText = speaker.name;
-    speaker.querySelector('.titles').innerText = speaker.titles;
-    speaker.querySelector('.desc').innerText = speaker.bio;
-    speaker.querySelector('.speaker-img').src = speaker.photoPath;
+  setSpeakerData = (speaker, data) => {
+    speaker.querySelector('.name').innerText = data.name;
+    speaker.querySelector('.titles').innerText = data.titles;
+    speaker.querySelector('.desc').innerText = data.bio;
+    speaker.querySelector('.speaker-img').src = data.photoPath;
   };
 }
