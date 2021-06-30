@@ -2,7 +2,9 @@
 
 # Capstone project for Module 1
 
-> project description...
+> Final project for Module 1. The project is based on an online website for a conference. 
+> My site is for a pixel artist conference.
+> On the menu you can change the style of the site to reflect the theme. Just tap on stylefy!
 
 ![screenshot](./assets/mobile-screens.png)
 
