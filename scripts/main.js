@@ -9,6 +9,7 @@ window.addEventListener('load', () => {
   // If I use the constructor only I get linter error
   mobileMenu.init();
 
+  // if there is a place to place the speakers
   if (sFunctions.templateContainer != null) {
     sFunctions.setSpeakerData();
   }

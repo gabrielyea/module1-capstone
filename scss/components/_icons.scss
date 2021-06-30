@@ -1,6 +1,7 @@
 @use '../utils'as *;
 
 $sprite-path: url(../assets/Site-Icons-scaled.png);
+$logos-sheet-path: url(../assets/LogoSpriteSheet.png);
 
 .icon {
   &-1 {
@@ -49,8 +50,49 @@ $sprite-path: url(../assets/Site-Icons-scaled.png);
   }
 }
 
-// @keyframes go {
-//   100% {
-//     background-position: -640px 0;
-//   }
-//}
+.logo {
+  &-1 {
+    @include spriteSheetElement(0, 0);
+
+    background-image: $logos-sheet-path;
+    width: 200px;
+    height: 64px;
+    display: block;
+  }
+
+  &-2 {
+    @include spriteSheetElement(835px, 0);
+
+    background-image: $logos-sheet-path;
+    width: 200px;
+    height: 64px;
+    display: block;
+  }
+
+  &-3 {
+    @include spriteSheetElement(600px, 0);
+
+    background-image: $logos-sheet-path;
+    width: 230px;
+    height: 64px;
+    display: block;
+  }
+
+  &-4 {
+    @include spriteSheetElement(330px, 0);
+
+    background-image: $logos-sheet-path;
+    width: 200px;
+    height: 64px;
+    display: block;
+  }
+
+  &-5 {
+    @include spriteSheetElement(130px, 0);
+
+    background-image: $logos-sheet-path;
+    width: 130px;
+    height: 64px;
+    display: block;
+  }
+}

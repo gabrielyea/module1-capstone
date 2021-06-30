@@ -127,6 +127,42 @@ header #event-info p {
   }
 }
 
+.logo-1 {
+  background-position: 0 0;
+  background-image: url(../assets/LogoSpriteSheet.png);
+  width: 200px;
+  height: 64px;
+  display: block;
+}
+.logo-2 {
+  background-position: 835px 0;
+  background-image: url(../assets/LogoSpriteSheet.png);
+  width: 200px;
+  height: 64px;
+  display: block;
+}
+.logo-3 {
+  background-position: 600px 0;
+  background-image: url(../assets/LogoSpriteSheet.png);
+  width: 230px;
+  height: 64px;
+  display: block;
+}
+.logo-4 {
+  background-position: 330px 0;
+  background-image: url(../assets/LogoSpriteSheet.png);
+  width: 200px;
+  height: 64px;
+  display: block;
+}
+.logo-5 {
+  background-position: 130px 0;
+  background-image: url(../assets/LogoSpriteSheet.png);
+  width: 130px;
+  height: 64px;
+  display: block;
+}
+
 nav {
   height: 80px;
   width: 100%;
@@ -445,6 +481,9 @@ header.about .contact a {
 .partners #partners {
   color: white;
   text-align: center;
+}
+.partners ul {
+  list-style: none;
 }
 
 footer {

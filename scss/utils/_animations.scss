@@ -112,6 +112,10 @@
   }
 }
 
+@mixin spriteSheetElement($xPos, $yPos) {
+  background-position: $xPos $yPos;
+}
+
 @mixin randomColorRotation($name) {
   @keyframes #{$name} {
     0% {
