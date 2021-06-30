@@ -4,7 +4,7 @@
 
 > project description...
 
-![screenshot](./misc/desktop-screenshot.png)
+![screenshot](./assets/mobile-screens.png)
 
 
 ## Built With
