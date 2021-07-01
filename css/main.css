@@ -197,7 +197,7 @@ nav #nav-desktop-menu {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-image: none;
     background-color: white;
     box-shadow: 2px 2px 5px grey;
@@ -208,10 +208,12 @@ nav #nav-desktop-menu {
   }
   nav #nav-logo {
     display: block;
+    margin-left: 10%;
   }
   nav #nav-desktop-menu {
     display: block;
     list-style: none;
+    margin-right: 10%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -220,6 +222,9 @@ nav #nav-desktop-menu {
   nav #nav-desktop-menu li {
     padding: 1em;
     font-weight: bold;
+  }
+  nav #nav-desktop-menu li:hover {
+    color: #ea4f36;
   }
 }
 .btn-1 {
