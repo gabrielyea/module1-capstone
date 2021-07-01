@@ -11,7 +11,7 @@
     @include flexCenter;
 
     background-color: $dark-background-color;
-    padding: 4em;
+    padding: 1em 0;
     margin: 0 0 0 0;
 
     #partners {
@@ -31,7 +31,8 @@
 }
 
 @include desktopResolution {
-  .home {
+  .home,
+  .about {
     .partners {
       @include flexCenter;
 

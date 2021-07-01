@@ -3,7 +3,7 @@ export default class MobileMenu {
 
   display = document.getElementById('mobile-menu');
 
-  displayStyleBtn = document.getElementById('stylefy');
+  displayStyleBtn = document.getElementsByClassName('stylefy');
 
   body = document.querySelector('body');
 
@@ -22,16 +22,15 @@ export default class MobileMenu {
       this.body.classList.remove('theme-normal');
       this.body.classList.add('theme-pixel');
     }
-
-    this.toggleMenu();
     this.isPixelStyle = !this.isPixelStyle;
   }
 
   init = () => {
-    this.displayStyleBtn.addEventListener('click', () => {
-      this.stylefy();
+    Object.entries(this.displayStyleBtn).forEach((element) => {
+      element[1].addEventListener('click', () => {
+        this.stylefy();
+      });
     });
-
     this.burgerBtn.addEventListener('click', () => {
       this.toggleMenu();
     });

@@ -4,10 +4,10 @@ $sprite-path: url(../assets/Site-Icons-scaled.png);
 $logos-sheet-path: url(../assets/LogoSpriteSheet-export.png);
 $logos-event: url(../assets/event-logo-scaled.png);
 
-%logo-size {
+%small-logo-size {
   background-image: $logos-sheet-path;
-  width: 136px;
-  height: 32px;
+  width: 91px;
+  height: 22px;
   display: block;
   background-size: 100%;
   opacity: 0.5;
@@ -23,7 +23,7 @@ $logos-event: url(../assets/event-logo-scaled.png);
   &-1 {
     @extend %icon-size;
 
-    @include spriteAnimation("sprite1", 0, 0, -640px, 0);
+    @include spriteAnimation("sprite2", 0, 0, -640px, -64px);
 
     animation: sprite1 1s steps(10) infinite;
   }
@@ -65,31 +65,31 @@ $logos-event: url(../assets/event-logo-scaled.png);
   &-1 {
     @include spriteSheetElement(0, 0);
 
-    @extend %logo-size;
+    @extend %small-logo-size;
   }
 
   &-2 {
     @include spriteSheetElement(0, -64px);
 
-    @extend %logo-size;
+    @extend %small-logo-size;
   }
 
   &-3 {
     @include spriteSheetElement(0, -128px);
 
-    @extend %logo-size;
+    @extend %small-logo-size;
   }
 
   &-4 {
     @include spriteSheetElement(0, -192px);
 
-    @extend %logo-size;
+    @extend %small-logo-size;
   }
 
   &-5 {
     @include spriteSheetElement(0, -256px);
 
-    @extend %logo-size;
+    @extend %small-logo-size;
   }
 }
 
@@ -98,4 +98,51 @@ $logos-event: url(../assets/event-logo-scaled.png);
   width: 64px;
   height: 64px;
   background-size: 100%;
+}
+
+@include desktopResolution {
+  %large-logo-size {
+    background-image: $logos-sheet-path;
+    width: 136px;
+    height: 32px;
+    display: block;
+    background-size: 100%;
+    opacity: 0.5;
+  }
+
+  .logo {
+    &-1 {
+      @extend %large-logo-size;
+    }
+
+    &-2 {
+      @extend %large-logo-size;
+    }
+
+    &-3 {
+      @extend %large-logo-size;
+    }
+
+    &-4 {
+      @extend %large-logo-size;
+    }
+
+    &-5 {
+      @extend %large-logo-size;
+    }
+  }
+}
+
+.face-icon {
+  background-image: url("../assets/facebook.svg");
+  width: 16px;
+  height: 16px;
+  filter: white;
+}
+
+.twit-icon {
+  background-image: url("../assets/twitter.svg");
+  width: 16px;
+  height: 16px;
+  fill: white;
 }

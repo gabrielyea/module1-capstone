@@ -1,6 +1,12 @@
 @use '../utils/'as *;
 @use '../themes/'as *;
 
+%small-image-size {
+  background-size: cover;
+  min-width: 300px;
+  min-height: 250px;
+}
+
 header {
   &.about {
     @include flexCenter;
@@ -45,10 +51,20 @@ header {
       }
     }
   }
+
+  box-shadow: 0 2px 1px rgb(228, 223, 223);
 }
 
 .logo {
   @include flexCenter;
+
+  .logo-p {
+    text-align: center;
+    width: 70%;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 1em;
+  }
 
   padding: 5em 0;
 
@@ -56,9 +72,16 @@ header {
     text-align: center;
   }
 
+  & .logo-frame {
+    border: 2px rgba($color: grey, $alpha: 0.2) solid;
+    border-radius: 4px;
+    padding: 1em 4em;
+  }
+
   & .event-logo {
     width: 128px;
     height: 128px;
+    padding: 3em;
   }
 
   box-shadow: 0 2px 1px rgb(228, 223, 223);
@@ -103,18 +126,40 @@ header {
       }
 
       &#event-1 {
+        @extend %small-image-size;
+
         background-image: linear-gradient(rgb(238, 117, 17, 0.5), rgb(238, 117, 17, 0.5)), url(../assets/crowd-1.jpeg);
-        background-size: cover;
-        width: 300px;
-        height: 250px;
       }
 
       &#event-2 {
+        @extend %small-image-size;
+
         background-image: linear-gradient(rgb(238, 117, 17, 0.5), rgb(238, 117, 17, 0.5)), url(../assets/crowd-2.jpeg);
-        background-size: cover;
-        width: 300px;
-        height: 250px;
       }
+    }
+  }
+}
+
+@include desktopResolution {
+  %large-image-size {
+    background-size: cover;
+    width: 40vw;
+    height: 35vh;
+  }
+
+  .other-events-img {
+    @include flexCenter(row);
+
+    #event-1 {
+      @extend %large-image-size;
+
+      background-image: linear-gradient(rgb(238, 117, 17, 0.5), rgb(238, 117, 17, 0.5)), url(../assets/crowd-1.jpeg);
+    }
+
+    #event-2 {
+      @extend %large-image-size;
+
+      background-image: linear-gradient(rgb(238, 117, 17, 0.5), rgb(238, 117, 17, 0.5)), url(../assets/crowd-2.jpeg);
     }
   }
 }

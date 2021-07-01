@@ -204,12 +204,14 @@ header {
     }
   }
 
-  &-container {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-  }
+  .logo-p {
+    @include doTheme($themes) {
+      $font: themed('secondFont');
+      $color : themed('secondTextColor');
 
-  hr {
-    margin: 1em;
+      font-family: $font;
+      color: $color;
+    }
   }
 }
 

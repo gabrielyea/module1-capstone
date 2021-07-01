@@ -12,14 +12,33 @@
 
 <body class="about theme-normal">
   <nav>
-    <div id="burger" class="burger-container">
-      <span class="burger"></span>
+    <div class="sub-menu">
+      <ul class="sub-menu-social">
+        <li>
+          <a><div class="face-icon"></div></a>
+        </li>
+        <li>
+          <a><div class="twit-icon"></div></a>
+        </li>
+        <li><a class="logout" href="#">Logout</a></li>
+      </ul>
+    </div>
+    <div class="main-menu">
+      <div id="burger" class="burger-container">
+        <span class="burger"></span>
+      </div>
+      <a href="../index.html" class="event-logo" id="nav-logo"></a>
+      <ul id="nav-desktop-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#past-events">Past events</a></li>
+        <li class="stylefy"><a href="#">Stylefy!</a></li>
+      </ul>
     </div>
   </nav>
 
   <div id="mobile-menu" class="mobile-menu">
     <ul id="mobile-menu-links">
-      <li id='stylefy'> <a href="#recent-works">Stylefy!!</a></li>
+      <li class="stylefy" id='stylefy'> <a href="#">Stylefy!!</a></li>
       <li><a href="../index.html">Home</a></li>
     </ul>
   </div>
@@ -45,11 +64,13 @@
       International Digital Artist Summmit
     </h2>
     <hr>
-    <div class="event-logo">
+    <p class="logo-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class="logo-frame">
+      <div class="event-logo"></div>
     </div>
   </section>
 
-  <section class="other-events">
+  <section id="past-events" class="other-events">
     <h3 class="other-events-h3">Check out our other events!</h3>
     <hr>
     <p class="other-events-p">Take a look at the last two events we had!</p>
@@ -71,11 +92,21 @@
     </h3>
     <hr>
     <ul class="partners-logos">
-      <li><div class="logo-1"></div></li>
-      <li><div class="logo-2"></div></li>
-      <li><div class="logo-3"></div></li>
-      <li><div class="logo-4"></div></li>
-      <li><div class="logo-5"></div></li>
+      <li>
+        <div class="logo-1"></div>
+      </li>
+      <li>
+        <div class="logo-2"></div>
+      </li>
+      <li>
+        <div class="logo-3"></div>
+      </li>
+      <li>
+        <div class="logo-4"></div>
+      </li>
+      <li>
+        <div class="logo-5"></div>
+      </li>
     </ul>
   </section>
 

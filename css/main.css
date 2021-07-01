@@ -61,7 +61,7 @@ header .header-event-info p {
   header {
     background-image: linear-gradient(to bottom, rgba(231, 231, 231, 0.568), white), url(../../assets/CloudsWIPBig.png);
     background-size: cover;
-    padding: 10em 12em 4em 10%;
+    padding: 10em 10% 4em 10%;
   }
   header h1 {
     font-size: 6em;
@@ -81,8 +81,8 @@ header .header-event-info p {
 }
 .logo-5, .logo-4, .logo-3, .logo-2, .logo-1 {
   background-image: url(../assets/LogoSpriteSheet-export.png);
-  width: 136px;
-  height: 32px;
+  width: 91px;
+  height: 22px;
   display: block;
   background-size: 100%;
   opacity: 0.5;
@@ -97,12 +97,12 @@ header .header-event-info p {
 .icon-1 {
   animation: sprite1 1s steps(10) infinite;
 }
-@keyframes sprite1 {
+@keyframes sprite2 {
   0% {
     background-position: 0 0;
   }
   100% {
-    background-position: -640px 0;
+    background-position: -640px -64px;
   }
 }
 .icon-2 {
@@ -173,6 +173,30 @@ header .header-event-info p {
   background-size: 100%;
 }
 
+@media only screen and (min-width: 768px) {
+  .logo-5, .logo-4, .logo-3, .logo-2, .logo-1 {
+    background-image: url(../assets/LogoSpriteSheet-export.png);
+    width: 136px;
+    height: 32px;
+    display: block;
+    background-size: 100%;
+    opacity: 0.5;
+  }
+}
+.face-icon {
+  background-image: url("../assets/facebook.svg");
+  width: 16px;
+  height: 16px;
+  filter: white;
+}
+
+.twit-icon {
+  background-image: url("../assets/twitter.svg");
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
+
 nav {
   height: 80px;
   width: 100%;
@@ -190,9 +214,43 @@ nav #nav-logo {
 nav #nav-desktop-menu {
   display: none;
 }
+nav a {
+  text-decoration: none;
+  color: grey;
+}
+nav a:hover {
+  color: #ea4f36;
+}
+nav .sub-menu {
+  display: none;
+}
 
 @media only screen and (min-width: 768px) {
   nav {
+    display: flex;
+    flex-direction: column;
+  }
+  nav .sub-menu {
+    display: block;
+    background-color: #303030;
+    height: 80px;
+  }
+  nav .sub-menu .sub-menu-social {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 0.1em 0.5em;
+  }
+  nav .sub-menu .logout {
+    text-decoration: none;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+  }
+  nav .main-menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -203,14 +261,14 @@ nav #nav-desktop-menu {
     box-shadow: 2px 2px 5px grey;
     filter: grayscale(0);
   }
-  nav #burger {
+  nav .main-menu #burger {
     display: none;
   }
-  nav #nav-logo {
+  nav .main-menu #nav-logo {
     display: block;
     margin-left: 10%;
   }
-  nav #nav-desktop-menu {
+  nav .main-menu #nav-desktop-menu {
     display: block;
     list-style: none;
     margin-right: 10%;
@@ -219,12 +277,9 @@ nav #nav-desktop-menu {
     justify-content: center;
     align-items: center;
   }
-  nav #nav-desktop-menu li {
+  nav .main-menu #nav-desktop-menu li {
     padding: 1em;
     font-weight: bold;
-  }
-  nav #nav-desktop-menu li:hover {
-    color: #ea4f36;
   }
 }
 .btn-1 {
@@ -290,7 +345,7 @@ hr {
 .btn-2 {
   background-color: transparent;
   border: solid rgba(151, 151, 151, 0.5) 2px;
-  margin: 1em 0;
+  margin: 1em 1em;
   padding: 1em;
   width: 95%;
   border-radius: 4px;
@@ -499,6 +554,15 @@ hr {
     font-size: 1em;
   }
 }
+.other-events-img li#event-2, .other-events-img li#event-1 {
+  background-size: cover;
+  min-width: 300px;
+  min-height: 250px;
+}
+
+header {
+  box-shadow: 0 2px 1px #e4dfdf;
+}
 header.about {
   display: flex;
   flex-direction: column;
@@ -550,12 +614,25 @@ header.about .contact a {
   padding: 5em 0;
   box-shadow: 0 2px 1px #e4dfdf;
 }
+.logo .logo-p {
+  text-align: center;
+  width: 70%;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 1em;
+}
 .logo-h2 {
   text-align: center;
+}
+.logo .logo-frame {
+  border: 2px rgba(128, 128, 128, 0.2) solid;
+  border-radius: 4px;
+  padding: 1em 4em;
 }
 .logo .event-logo {
   width: 128px;
   height: 128px;
+  padding: 3em;
 }
 
 .other-events {
@@ -600,17 +677,31 @@ header.about .contact a {
 }
 .other-events-img li#event-1 {
   background-image: linear-gradient(rgba(238, 117, 17, 0.5), rgba(238, 117, 17, 0.5)), url(../assets/crowd-1.jpeg);
-  background-size: cover;
-  width: 300px;
-  height: 250px;
 }
 .other-events-img li#event-2 {
   background-image: linear-gradient(rgba(238, 117, 17, 0.5), rgba(238, 117, 17, 0.5)), url(../assets/crowd-2.jpeg);
-  background-size: cover;
-  width: 300px;
-  height: 250px;
 }
 
+@media only screen and (min-width: 768px) {
+  .other-events-img #event-2, .other-events-img #event-1 {
+    background-size: cover;
+    width: 40vw;
+    height: 35vh;
+  }
+
+  .other-events-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .other-events-img #event-1 {
+    background-image: linear-gradient(rgba(238, 117, 17, 0.5), rgba(238, 117, 17, 0.5)), url(../assets/crowd-1.jpeg);
+  }
+  .other-events-img #event-2 {
+    background-image: linear-gradient(rgba(238, 117, 17, 0.5), rgba(238, 117, 17, 0.5)), url(../assets/crowd-2.jpeg);
+  }
+}
 @keyframes growDown {
   0% {
     transform: scaleY(0);
@@ -692,7 +783,7 @@ header.about .contact a {
   justify-content: center;
   align-items: center;
   background-color: #303030;
-  padding: 4em;
+  padding: 1em 0;
   margin: 0 0 0 0;
 }
 .about .partners #partners {
@@ -711,7 +802,8 @@ header.about .contact a {
 }
 
 @media only screen and (min-width: 768px) {
-  .home .partners {
+  .home .partners,
+.about .partners {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -720,12 +812,14 @@ header.about .contact a {
     padding: 2em 0 5em 0;
     margin: 0 0 0 0;
   }
-  .home .partners #partners {
+  .home .partners #partners,
+.about .partners #partners {
     color: rgba(255, 255, 255, 0.5);
     text-align: center;
     font-size: 2em;
   }
-  .home .partners ul {
+  .home .partners ul,
+.about .partners ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -932,11 +1026,13 @@ footer .footer-p {
 .theme-normal .logo-h2 {
   font-family: "Lato";
 }
-.logo-container {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+.theme-pixel .logo .logo-p {
+  font-family: "Secret Mana";
+  color: #585858;
 }
-.logo hr {
-  margin: 1em;
+.theme-normal .logo .logo-p {
+  font-family: "Lato";
+  color: #585858;
 }
 
 .theme-pixel .other-events-h3, .theme-pixel .other-events-p {
