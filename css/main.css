@@ -446,10 +446,13 @@ hr {
   list-style: none;
 }
 .speakers ul li {
-  display: grid;
+  display: none;
   grid-template-columns: 192px 2fr;
   grid-template-rows: 192px;
   margin: 0.5em;
+}
+.speakers ul li.show {
+  display: grid;
 }
 .speakers ul li .speaker-img {
   padding: 1em;

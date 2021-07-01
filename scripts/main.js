@@ -12,5 +12,6 @@ window.addEventListener('load', () => {
   // if there is a place to place the speakers
   if (sFunctions.templateContainer != null) {
     sFunctions.createSpeakers();
+    sFunctions.toggleSpeakerVisibility(2);
   }
 });

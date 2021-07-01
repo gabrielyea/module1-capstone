@@ -38,10 +38,14 @@
     list-style: none;
 
     li {
-      display: grid;
+      display: none;
       grid-template-columns: 192px 2fr;
       grid-template-rows: 192px;
       margin: 0.5em;
+
+      &.show {
+        display: grid;
+      }
 
       .speaker-img {
         padding: 1em;
