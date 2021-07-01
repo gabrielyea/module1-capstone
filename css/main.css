@@ -481,10 +481,34 @@ hr {
   font-size: small;
 }
 @media only screen and (min-width: 768px) {
+  .speakers h3 {
+    font-size: 2em;
+  }
   .speakers ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+  }
+  .speakers ul li {
+    display: grid;
+  }
+  .speakers ul .speaker-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  .speakers ul .speaker-info h4 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .speakers ul .speaker-info h5 {
+    font-size: 1em;
+  }
+  .speakers ul .speaker-info p {
+    font-size: 1em;
   }
 }
 

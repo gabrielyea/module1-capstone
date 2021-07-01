@@ -81,10 +81,38 @@
   }
 
   @include desktopResolution {
+    h3 {
+      font-size: 2em;
+    }
+
     ul {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
+
+      li {
+        display: grid;
+      }
+
+      .speaker-info {
+        @include flexCenter();
+
+        align-items: flex-start;
+        justify-content: space-around;
+
+        h4 {
+          font-size: 2em;
+          font-weight: bold;
+        }
+
+        h5 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 1em;
+        }
+      }
     }
   }
 }
