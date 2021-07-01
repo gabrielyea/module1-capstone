@@ -7,20 +7,15 @@
   border: none;
   padding: 1em;
   margin: 2em 0 2em 0;
-
-  @include desktopResolution {
-    background-color: transparent;
-    text-decoration: underline;
-    font-size: 1.5em;
-  }
 }
 
 hr {
   color: $main-theme-color;
   width: 2em;
-  margin: 1em;
+  margin: 0.5em auto;
   border-bottom: $main-theme-color 2px solid;
   border-top: none;
+  text-align: center;
 }
 
 .burger-container {
@@ -80,8 +75,16 @@ hr {
   padding: 1em;
   width: 95%;
   border-radius: 4px;
+}
 
-  @include desktopResolution {
+@include desktopResolution {
+  .btn-1 {
+    background-color: transparent;
+    text-decoration: underline;
+    font-size: 1.5em;
+  }
+
+  .btn-2 {
     display: none;
   }
 }

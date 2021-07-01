@@ -1,0 +1,37 @@
+@use "../utils/" as *;
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1em;
+  height: 150px;
+
+  .event-logo {
+    margin: auto;
+  }
+
+  & .footer-p {
+    font-size: 0.7em;
+    margin: auto;
+  }
+}
+
+@include desktopResolution {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    .event-logo {
+      margin: auto;
+      scale: 2;
+    }
+
+    & .footer-p {
+      font-size: 1em;
+      margin: 1em 5em;
+      font-weight: bold;
+      justify-self: left;
+      align-self: center;
+    }
+  }
+}

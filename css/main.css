@@ -35,13 +35,6 @@ header {
   background-position: left bottom, right, top;
   background-repeat: no-repeat;
 }
-@media only screen and (min-width: 768px) {
-  header {
-    background-image: linear-gradient(to bottom, rgba(231, 231, 231, 0.568), white), url(../../assets/CloudsWIPBig.png);
-    background-size: cover;
-    padding: 10em 12em 4em 12em;
-  }
-}
 header h1.text-clip {
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,45 +43,58 @@ header h1.text-clip {
   -webkit-background-clip: text;
   background-clip: text;
 }
-@media only screen and (min-width: 768px) {
-  header h1 {
-    font-size: 6em;
-  }
-}
-header #event-desc {
+header .header-event-description {
   border: 2px solid white;
   font-size: 0.5em;
   margin: 1em 0;
   background-color: #f7f7f7;
 }
+header .header-event-info {
+  font-size: 1em;
+}
+header .header-event-info p {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 768px) {
-  header #event-desc {
+  header {
+    background-image: linear-gradient(to bottom, rgba(231, 231, 231, 0.568), white), url(../../assets/CloudsWIPBig.png);
+    background-size: cover;
+    padding: 10em 12em 4em 10%;
+  }
+  header h1 {
+    font-size: 6em;
+  }
+  header .header-event-description {
     font-size: 1em;
     width: 60%;
     padding: 2em 1em;
   }
-}
-header #event-info {
-  font-size: 1em;
-}
-header #event-info p {
-  font-size: 0.8em;
-  font-weight: bold;
-}
-@media only screen and (min-width: 768px) {
-  header #event-info {
+  header .header-event-info {
     font-size: 2em;
   }
-  header #event-info p {
+  header .header-event-info p {
     font-size: 0.5em;
     font-weight: bold;
   }
 }
+.logo-5, .logo-4, .logo-3, .logo-2, .logo-1 {
+  background-image: url(../assets/LogoSpriteSheet-export.png);
+  width: 136px;
+  height: 32px;
+  display: block;
+  background-size: 100%;
+  opacity: 0.5;
+}
 
-.icon-1 {
+.icon-5, .icon-4, .icon-3, .icon-2, .icon-1 {
   width: 64px;
   height: 64px;
   background-image: url(../assets/Site-Icons-scaled.png);
+}
+
+.icon-1 {
   animation: sprite1 1s steps(10) infinite;
 }
 @keyframes sprite1 {
@@ -100,9 +106,6 @@ header #event-info p {
   }
 }
 .icon-2 {
-  width: 64px;
-  height: 64px;
-  background-image: url(../assets/Site-Icons-scaled.png);
   animation: sprite2 1s steps(10) infinite;
 }
 @keyframes sprite2 {
@@ -114,9 +117,6 @@ header #event-info p {
   }
 }
 .icon-3 {
-  width: 64px;
-  height: 64px;
-  background-image: url(../assets/Site-Icons-scaled.png);
   animation: sprite3 1s steps(10) infinite;
 }
 @keyframes sprite3 {
@@ -128,9 +128,6 @@ header #event-info p {
   }
 }
 .icon-4 {
-  width: 64px;
-  height: 64px;
-  background-image: url(../assets/Site-Icons-scaled.png);
   animation: sprite4 1s steps(10) infinite;
 }
 @keyframes sprite4 {
@@ -142,9 +139,6 @@ header #event-info p {
   }
 }
 .icon-5 {
-  width: 64px;
-  height: 64px;
-  background-image: url(../assets/Site-Icons-scaled.png);
   animation: sprite5 1s steps(10) infinite;
 }
 @keyframes sprite5 {
@@ -158,48 +152,18 @@ header #event-info p {
 
 .logo-1 {
   background-position: 0 0;
-  background-image: url(../assets/LogoSpriteSheet.png);
-  width: 9vh;
-  height: 3vh;
-  display: block;
-  background-size: 50vh;
-  opacity: 0.5;
 }
 .logo-2 {
-  background-position: -110px 0;
-  background-image: url(../assets/LogoSpriteSheet.png);
-  width: 11vh;
-  height: 3vh;
-  display: block;
-  background-size: 50vh;
-  opacity: 0.5;
+  background-position: 0 -64px;
 }
 .logo-3 {
-  background-position: -234px 0;
-  background-image: url(../assets/LogoSpriteSheet.png);
-  width: 12vh;
-  height: 3vh;
-  display: block;
-  background-size: 50vh;
-  opacity: 0.5;
+  background-position: 0 -128px;
 }
 .logo-4 {
-  background-position: -370px 0;
-  background-image: url(../assets/LogoSpriteSheet.png);
-  width: 9vh;
-  height: 3vh;
-  display: block;
-  background-size: 50vh;
-  opacity: 0.5;
+  background-position: 0 -192px;
 }
 .logo-5 {
-  background-position: -470px 0;
-  background-image: url(../assets/LogoSpriteSheet.png);
-  width: 6vh;
-  height: 3vh;
-  display: block;
-  background-size: 50vh;
-  opacity: 0.5;
+  background-position: 0 -256px;
 }
 
 .event-logo {
@@ -266,20 +230,14 @@ nav #nav-desktop-menu {
   padding: 1em;
   margin: 2em 0 2em 0;
 }
-@media only screen and (min-width: 768px) {
-  .btn-1 {
-    background-color: transparent;
-    text-decoration: underline;
-    font-size: 1.5em;
-  }
-}
 
 hr {
   color: #ea4f36;
   width: 2em;
-  margin: 1em;
+  margin: 0.5em auto;
   border-bottom: #ea4f36 2px solid;
   border-top: none;
+  text-align: center;
 }
 
 .burger-container {
@@ -332,12 +290,18 @@ hr {
   width: 95%;
   border-radius: 4px;
 }
+
 @media only screen and (min-width: 768px) {
+  .btn-1 {
+    background-color: transparent;
+    text-decoration: underline;
+    font-size: 1.5em;
+  }
+
   .btn-2 {
     display: none;
   }
 }
-
 .program {
   display: flex;
   flex-direction: column;
@@ -346,11 +310,6 @@ hr {
 }
 .program h3 {
   margin: 2em 0 0.5em 0;
-}
-@media only screen and (min-width: 768px) {
-  .program h3 {
-    font-size: 2em;
-  }
 }
 .program ul {
   display: flex;
@@ -376,34 +335,36 @@ hr {
   color: white;
   padding: 1em;
 }
+
 @media only screen and (min-width: 768px) {
+  .program h3 {
+    font-size: 2em;
+  }
+  .program ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+  }
   .program ul li {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 3fr;
     align-items: center;
     justify-items: center;
     max-width: 300px;
-    height: 200px;
+    min-width: 160px;
+    height: 210px;
   }
   .program ul li p {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
   }
   .program ul li h4 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: center;
   }
 }
-@media only screen and (min-width: 768px) {
-  .program ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1em;
-  }
-}
-
 .theme-pixel .program {
   background-image: url(../assets/tiled-background.png);
 }
@@ -453,14 +414,12 @@ hr {
 }
 
 .speakers {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   box-shadow: 2px 2px 10px grey;
 }
 .speakers h3 {
-  margin: 2em 0 0.5em 0;
+  text-align: center;
+  margin: 0;
+  padding-top: 2em;
 }
 .speakers ul {
   list-style: none;
@@ -500,6 +459,7 @@ hr {
 .speakers ul .speaker-info p {
   font-size: small;
 }
+
 @media only screen and (min-width: 768px) {
   .speakers h3 {
     font-size: 2em;
@@ -508,6 +468,9 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    padding: 0 10%;
+    font-size: 1vw;
+    padding-top: 2em;
   }
   .speakers ul li {
     display: grid;
@@ -518,20 +481,19 @@ hr {
     justify-content: center;
     align-items: center;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
   .speakers ul .speaker-info h4 {
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: bold;
   }
   .speakers ul .speaker-info h5 {
-    font-size: 1em;
+    font-size: 1.2em;
   }
   .speakers ul .speaker-info p {
     font-size: 1em;
   }
 }
-
 header.about {
   display: flex;
   flex-direction: column;
@@ -573,20 +535,6 @@ header.about .contact a {
 }
 .theme-normal header.about .contact a {
   font-family: "Lato";
-}
-
-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 1em;
-  height: 150px;
-}
-footer .event-logo {
-  margin: auto;
-}
-footer .footer-p {
-  font-size: 0.7em;
-  margin: auto;
 }
 
 .logo {
@@ -656,30 +604,6 @@ footer .footer-p {
   background-size: cover;
   width: 300px;
   height: 250px;
-}
-
-.about .partners {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #303030;
-  padding: 4em;
-  margin: 0 0 0 0;
-}
-.about .partners #partners {
-  color: white;
-  text-align: center;
-}
-.about .partners ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  list-style: none;
-  gap: 1em 0.5em;
 }
 
 @keyframes growDown {
@@ -756,31 +680,6 @@ footer .footer-p {
 .home .partners {
   display: none;
 }
-@media only screen and (min-width: 768px) {
-  .home .partners {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #303030;
-    padding: 4em;
-    margin: 0 0 0 0;
-  }
-  .home .partners #partners {
-    color: white;
-    text-align: center;
-  }
-  .home .partners ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 1em 3em;
-  }
-}
 
 .about .partners {
   display: flex;
@@ -806,6 +705,64 @@ footer .footer-p {
   gap: 1em 0.5em;
 }
 
+@media only screen and (min-width: 768px) {
+  .home .partners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #303030;
+    padding: 2em 0 5em 0;
+    margin: 0 0 0 0;
+  }
+  .home .partners #partners {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 2em;
+  }
+  .home .partners ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1em 3em;
+    margin-top: 2em;
+  }
+}
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1em;
+  height: 150px;
+}
+footer .event-logo {
+  margin: auto;
+}
+footer .footer-p {
+  font-size: 0.7em;
+  margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  footer .event-logo {
+    margin: auto;
+    scale: 2;
+  }
+  footer .footer-p {
+    font-size: 1em;
+    margin: 1em 5em;
+    font-weight: bold;
+    justify-self: left;
+    align-self: center;
+  }
+}
 .theme-pixel p {
   font-family: "Secret Mana", "Courier New", Courier, monospace;
 }

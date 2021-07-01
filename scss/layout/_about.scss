@@ -47,22 +47,6 @@ header {
   }
 }
 
-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 1em;
-  height: 150px;
-
-  .event-logo {
-    margin: auto;
-  }
-
-  & .footer-p {
-    font-size: 0.7em;
-    margin: auto;
-  }
-}
-
 .logo {
   @include flexCenter;
 
@@ -131,30 +115,6 @@ footer {
         width: 300px;
         height: 250px;
       }
-    }
-  }
-}
-
-.about {
-  .partners {
-    @include flexCenter;
-
-    background-color: $dark-background-color;
-    padding: 4em;
-    margin: 0 0 0 0;
-
-    #partners {
-      color: white;
-      text-align: center;
-    }
-
-    ul {
-      @include flexCenter;
-
-      flex-direction: row;
-      flex-wrap: wrap;
-      list-style: none;
-      gap: 1em 0.5em;
     }
   }
 }

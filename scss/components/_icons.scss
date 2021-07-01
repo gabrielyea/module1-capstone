@@ -1,53 +1,63 @@
 @use '../utils'as *;
 
 $sprite-path: url(../assets/Site-Icons-scaled.png);
-$logos-sheet-path: url(../assets/LogoSpriteSheet.png);
+$logos-sheet-path: url(../assets/LogoSpriteSheet-export.png);
 $logos-event: url(../assets/event-logo-scaled.png);
+
+%logo-size {
+  background-image: $logos-sheet-path;
+  width: 136px;
+  height: 32px;
+  display: block;
+  background-size: 100%;
+  opacity: 0.5;
+}
+
+%icon-size {
+  width: 64px;
+  height: 64px;
+  background-image: $sprite-path;
+}
 
 .icon {
   &-1 {
-    width: 64px;
-    height: 64px;
-    background-image: $sprite-path;
-    animation: sprite1 1s steps(10) infinite;
+    @extend %icon-size;
 
     @include spriteAnimation("sprite1", 0, 0, -640px, 0);
+
+    animation: sprite1 1s steps(10) infinite;
   }
 
   &-2 {
-    width: 64px;
-    height: 64px;
-    background-image: $sprite-path;
-    animation: sprite2 1s steps(10) infinite;
+    @extend %icon-size;
 
     @include spriteAnimation("sprite2", 0, -64px, -640px, -64px);
+
+    animation: sprite2 1s steps(10) infinite;
   }
 
   &-3 {
-    width: 64px;
-    height: 64px;
-    background-image: $sprite-path;
-    animation: sprite3 1s steps(10) infinite;
+    @extend %icon-size;
 
     @include spriteAnimation("sprite3", 0, -128px, -640px, -128px);
+
+    animation: sprite3 1s steps(10) infinite;
   }
 
   &-4 {
-    width: 64px;
-    height: 64px;
-    background-image: $sprite-path;
-    animation: sprite4 1s steps(10) infinite;
+    @extend %icon-size;
 
     @include spriteAnimation("sprite4", 0, -192px, -640px, -192px);
+
+    animation: sprite4 1s steps(10) infinite;
   }
 
   &-5 {
-    width: 64px;
-    height: 64px;
-    background-image: $sprite-path;
-    animation: sprite5 1s steps(10) infinite;
+    @extend %icon-size;
 
     @include spriteAnimation("sprite5", 0, -256px, -640px, -256px);
+
+    animation: sprite5 1s steps(10) infinite;
   }
 }
 
@@ -55,56 +65,31 @@ $logos-event: url(../assets/event-logo-scaled.png);
   &-1 {
     @include spriteSheetElement(0, 0);
 
-    background-image: $logos-sheet-path;
-    width: 9vh;
-    height: 3vh;
-    display: block;
-    background-size: 50vh;
-    opacity: 0.5;
+    @extend %logo-size;
   }
 
   &-2 {
-    @include spriteSheetElement(-110px, 0);
+    @include spriteSheetElement(0, -64px);
 
-    background-image: $logos-sheet-path;
-    width: 11vh;
-    height: 3vh;
-    display: block;
-    background-size: 50vh;
-    opacity: 0.5;
+    @extend %logo-size;
   }
 
   &-3 {
-    @include spriteSheetElement(-234px, 0);
+    @include spriteSheetElement(0, -128px);
 
-    background-image: $logos-sheet-path;
-    width: 12vh;
-    height: 3vh;
-    display: block;
-    background-size: 50vh;
-    opacity: 0.5;
+    @extend %logo-size;
   }
 
   &-4 {
-    @include spriteSheetElement(-370px, 0);
+    @include spriteSheetElement(0, -192px);
 
-    background-image: $logos-sheet-path;
-    width: 9vh;
-    height: 3vh;
-    display: block;
-    background-size: 50vh;
-    opacity: 0.5;
+    @extend %logo-size;
   }
 
   &-5 {
-    @include spriteSheetElement(-470px, 0);
+    @include spriteSheetElement(0, -256px);
 
-    background-image: $logos-sheet-path;
-    width: 6vh;
-    height: 3vh;
-    display: block;
-    background-size: 50vh;
-    opacity: 0.5;
+    @extend %logo-size;
   }
 }
 
