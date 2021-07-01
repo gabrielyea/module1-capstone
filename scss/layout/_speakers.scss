@@ -80,6 +80,8 @@
     }
   }
 
+  box-shadow: 2px 2px 10px grey;
+
   @include desktopResolution {
     h3 {
       font-size: 2em;

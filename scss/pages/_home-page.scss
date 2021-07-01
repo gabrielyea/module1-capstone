@@ -257,3 +257,13 @@ footer {
     color: $text-color-main;
   }
 }
+
+.btn-2 {
+  @include doTheme($themes) {
+    $font: themed('secondFont');
+    $text-color-main: themed('secondTextColor');
+
+    font-family: $font;
+    color: $text-color-main;
+  }
+}

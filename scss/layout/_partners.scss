@@ -1,0 +1,55 @@
+@use "../utils/" as *;
+
+.home {
+  .partners {
+    display: none;
+  }
+
+  @include desktopResolution {
+    .partners {
+      @include flexCenter;
+
+      background-color: $dark-background-color;
+      padding: 4em;
+      margin: 0 0 0 0;
+
+      #partners {
+        color: white;
+        text-align: center;
+      }
+
+      ul {
+        @include flexCenter;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+        gap: 1em 3em;
+      }
+    }
+  }
+}
+
+.about {
+  .partners {
+    @include flexCenter;
+
+    background-color: $dark-background-color;
+    padding: 4em;
+    margin: 0 0 0 0;
+
+    #partners {
+      color: white;
+      text-align: center;
+    }
+
+    ul {
+      @include flexCenter;
+
+      flex-direction: row;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 1em 0.5em;
+    }
+  }
+}

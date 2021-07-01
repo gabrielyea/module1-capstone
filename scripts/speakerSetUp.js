@@ -48,7 +48,7 @@ export default class SpeakerFunctions {
     };
     // probably a much better way to do this but got a little bit lazy
     const btnMsg = this.toggleBtn.innerText;
-    if (btnMsg === 'Show more' ? setMessage('Show less') : setMessage('Show more'));
+    if (btnMsg === 'SHOW MORE' ? setMessage('SHOW LESS') : setMessage('SHOW MORE'));
 
     for (let i = index; i < this.speakerList.length; i += 1) {
       this.speakerList[i].classList.toggle('show');

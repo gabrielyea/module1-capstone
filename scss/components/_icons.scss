@@ -64,7 +64,7 @@ $logos-event: url(../assets/event-logo-scaled.png);
   }
 
   &-2 {
-    @include spriteSheetElement(-815px, 0);
+    @include spriteSheetElement(-110px, 0);
 
     background-image: $logos-sheet-path;
     width: 11vh;
@@ -75,7 +75,7 @@ $logos-event: url(../assets/event-logo-scaled.png);
   }
 
   &-3 {
-    @include spriteSheetElement(-530px, 0);
+    @include spriteSheetElement(-234px, 0);
 
     background-image: $logos-sheet-path;
     width: 12vh;
@@ -86,7 +86,7 @@ $logos-event: url(../assets/event-logo-scaled.png);
   }
 
   &-4 {
-    @include spriteSheetElement(-620px, 0);
+    @include spriteSheetElement(-370px, 0);
 
     background-image: $logos-sheet-path;
     width: 9vh;
@@ -97,10 +97,10 @@ $logos-event: url(../assets/event-logo-scaled.png);
   }
 
   &-5 {
-    @include spriteSheetElement(-320px, 0);
+    @include spriteSheetElement(-470px, 0);
 
     background-image: $logos-sheet-path;
-    width: 6.8vh;
+    width: 6vh;
     height: 3vh;
     display: block;
     background-size: 50vh;

@@ -166,7 +166,7 @@ header #event-info p {
   opacity: 0.5;
 }
 .logo-2 {
-  background-position: -815px 0;
+  background-position: -110px 0;
   background-image: url(../assets/LogoSpriteSheet.png);
   width: 11vh;
   height: 3vh;
@@ -175,7 +175,7 @@ header #event-info p {
   opacity: 0.5;
 }
 .logo-3 {
-  background-position: -530px 0;
+  background-position: -234px 0;
   background-image: url(../assets/LogoSpriteSheet.png);
   width: 12vh;
   height: 3vh;
@@ -184,7 +184,7 @@ header #event-info p {
   opacity: 0.5;
 }
 .logo-4 {
-  background-position: -620px 0;
+  background-position: -370px 0;
   background-image: url(../assets/LogoSpriteSheet.png);
   width: 9vh;
   height: 3vh;
@@ -193,9 +193,9 @@ header #event-info p {
   opacity: 0.5;
 }
 .logo-5 {
-  background-position: -320px 0;
+  background-position: -470px 0;
   background-image: url(../assets/LogoSpriteSheet.png);
-  width: 6.8vh;
+  width: 6vh;
   height: 3vh;
   display: block;
   background-size: 50vh;
@@ -324,6 +324,20 @@ hr {
   transform: translate(0, -8px) rotate(-45deg);
 }
 
+.btn-2 {
+  background-color: transparent;
+  border: solid rgba(151, 151, 151, 0.5) 2px;
+  margin: 1em 0;
+  padding: 1em;
+  width: 95%;
+  border-radius: 4px;
+}
+@media only screen and (min-width: 768px) {
+  .btn-2 {
+    display: none;
+  }
+}
+
 .program {
   display: flex;
   flex-direction: column;
@@ -331,7 +345,12 @@ hr {
   align-items: center;
 }
 .program h3 {
-  margin: 1em 0 0.5em 0;
+  margin: 2em 0 0.5em 0;
+}
+@media only screen and (min-width: 768px) {
+  .program h3 {
+    font-size: 2em;
+  }
 }
 .program ul {
   display: flex;
@@ -438,6 +457,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 2px 2px 10px grey;
 }
 .speakers h3 {
   margin: 2em 0 0.5em 0;
@@ -559,6 +579,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1em;
+  height: 150px;
 }
 footer .event-logo {
   margin: auto;
@@ -637,20 +658,20 @@ footer .footer-p {
   height: 250px;
 }
 
-.partners {
+.about .partners {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #2e222f;
+  background-color: #303030;
   padding: 4em;
   margin: 0 0 0 0;
 }
-.partners #partners {
+.about .partners #partners {
   color: white;
   text-align: center;
 }
-.partners ul {
+.about .partners ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -730,6 +751,59 @@ footer .footer-p {
 
 .theme-normal .mobile-menu {
   background-image: url(../assets/tiled-background-2.png);
+}
+
+.home .partners {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .home .partners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #303030;
+    padding: 4em;
+    margin: 0 0 0 0;
+  }
+  .home .partners #partners {
+    color: white;
+    text-align: center;
+  }
+  .home .partners ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1em 3em;
+  }
+}
+
+.about .partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #303030;
+  padding: 4em;
+  margin: 0 0 0 0;
+}
+.about .partners #partners {
+  color: white;
+  text-align: center;
+}
+.about .partners ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1em 0.5em;
 }
 
 .theme-pixel p {
@@ -934,6 +1008,15 @@ footer .footer-p {
   color: #585858;
 }
 .theme-normal #nav-desktop-menu {
+  font-family: "Lato";
+  color: #585858;
+}
+
+.theme-pixel .btn-2 {
+  font-family: "Secret Mana";
+  color: #585858;
+}
+.theme-normal .btn-2 {
   font-family: "Lato";
   color: #585858;
 }
