@@ -23,7 +23,7 @@ $logos-event: url(../assets/event-logo-scaled.png);
   &-1 {
     @extend %icon-size;
 
-    @include spriteAnimation("sprite2", 0, 0, -640px, -64px);
+    @include spriteAnimation("sprite1", 0, 0, -640px, 0);
 
     animation: sprite1 1s steps(10) infinite;
   }

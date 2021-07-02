@@ -97,12 +97,12 @@ header .header-event-info p {
 .icon-1 {
   animation: sprite1 1s steps(10) infinite;
 }
-@keyframes sprite2 {
+@keyframes sprite1 {
   0% {
     background-position: 0 0;
   }
   100% {
-    background-position: -640px -64px;
+    background-position: -640px 0;
   }
 }
 .icon-2 {
