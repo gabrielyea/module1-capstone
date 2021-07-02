@@ -683,6 +683,10 @@ header.about .contact a {
 }
 
 @media only screen and (min-width: 768px) {
+  header.about {
+    background-image: linear-gradient(to bottom, rgba(231, 231, 231, 0.568), white);
+  }
+
   .other-events-img #event-2, .other-events-img #event-1 {
     background-size: cover;
     width: 40vw;

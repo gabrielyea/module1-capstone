@@ -141,6 +141,12 @@ header {
 }
 
 @include desktopResolution {
+  header {
+    &.about {
+      background-image: linear-gradient(to bottom, rgba(231, 231, 231, 0.568), rgb(255, 255, 255));
+    }
+  }
+
   %large-image-size {
     background-size: cover;
     width: 40vw;
