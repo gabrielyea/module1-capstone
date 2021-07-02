@@ -11,14 +11,6 @@ header {
   background-position: left bottom, right, top;
   background-repeat: no-repeat;
 
-  @include desktopResolution {
-    padding: 10em 8em 8em 8em;
-    background-image:
-      linear-gradient(to bottom, rgba(231, 231, 231, 0.568), rgb(255, 255, 255)),
-      url(../assets/CloudsWIPBig.png);
-    background-size: cover;
-  }
-
   h1 {
     &.text-clip {
       $property: text;
@@ -32,29 +24,53 @@ header {
       background-clip: $property;
     }
 
-    @include desktopResolution {
-      font-size: 3em;
-    }
+    // @include desktopResolution {
+    //   font-size: 6em;
+    // }
   }
 
-  #event-desc {
+  .header-event-description {
     border: 2px solid white;
     font-size: 0.5em;
     margin: 1em 0;
     background-color: #f7f7f7;
-
-    @include desktopResolution {
-      font-size: 0.7em;
-      width: 70%;
-      padding: 2em 1em;
-    }
   }
 
-  #event-info {
-    font-size: 0.8em;
+  .header-event-info {
+    font-size: 1em;
 
     p {
+      font-size: 0.8em;
       font-weight: bold;
+    }
+  }
+}
+
+@include desktopResolution {
+  header {
+    background-image:
+      linear-gradient(to bottom, rgba(231, 231, 231, 0.568), rgb(255, 255, 255)),
+      url(../assets/CloudsWIPBig.png);
+    background-size: cover;
+    padding: 10em 10% 4em 10%;
+
+    h1 {
+      font-size: 6em;
+    }
+
+    .header-event-description {
+      font-size: 1em;
+      width: 60%;
+      padding: 2em 1em;
+    }
+
+    .header-event-info {
+      font-size: 2em;
+
+      p {
+        font-size: 0.5em;
+        font-weight: bold;
+      }
     }
   }
 }

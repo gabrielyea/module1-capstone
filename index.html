@@ -10,24 +10,35 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="theme-normal">
+<body class="home theme-normal">
   <nav>
-    <div id="burger" class="burger-container">
-      <span class="burger"></span>
+    <div class="sub-menu">
+      <ul class="sub-menu-social">
+        <li>
+          <a href="#"><div class="face-icon"></div></a>
+        </li>
+        <li>
+          <a href="#"><div class="twit-icon"></div></a>
+        </li>
+        <li><a class="logout" href="#">Logout</a></li>
+      </ul>
     </div>
-    <div id="nav-logo" class="event-logo"></div>
-    <ul id="nav-desktop-menu">
-      <li>About</li>
-      <li>Program</li>
-      <li>Join</li>
-      <li>Sponsor</li>
-      <li>News</li>
-    </ul>
+    <div class="main-menu">
+      <div id="burger" class="burger-container">
+        <span class="burger"></span>
+      </div>
+      <div id="nav-logo" class="event-logo"></div>
+      <ul id="nav-desktop-menu">
+        <li><a href="html/about.html">About</a></li>
+        <li><a href="#program">Program</a></li>
+        <li class="stylefy"><a href="#">Stylefy!</a></li>
+      </ul>
+    </div>
   </nav>
 
   <div id="mobile-menu" class="mobile-menu">
     <ul id="mobile-menu-links">
-      <li id='stylefy'> <a href="#recent-works">Stylefy!!</a></li>
+      <li class="stylefy" id='stylefy'><a href="#">Stylefy!!</a></li>
       <li><a href="html/about.html">About</a></li>
     </ul>
   </div>
@@ -37,15 +48,16 @@
     <h1 class="text-clip">
       Pixel Art International Convention 2021.
     </h1>
-    <p id="event-desc">A great place to learn about the latest techniques and practices in the industry!
+    <p id="event-desc" class="header-event-description">A great place to learn about the latest techniques and practices
+      in the industry!
       Come and learn from your favorite artist and designers.</p>
-    <section id="event-info">
-      <h2> 2021.10.10 (FRI) - 23(MON) </h2>
-      <p> @ The convention center</p>
+    <section id="event-info" class="header-event-info">
+      <h2 class="header-event-info-h2"> 2021.10.10 (FRI) - 23(MON) </h2>
+      <p class="header-event-info-p"> @ The convention center</p>
     </section>
   </header>
 
-  <section class="program">
+  <section id="program" class="program">
     <h3>Main program</h3>
     <hr class="under-line">
     <ul>
@@ -79,7 +91,7 @@
   </section>
 
   <section class="speakers">
-    <h3> Featured speakers</h3>
+    <h3> Featured Speakers</h3>
     <hr>
     <ul id="speaker-ul">
       <template id="speaker-li">
@@ -92,11 +104,39 @@
             <p class="desc">blablablablbalbablablbalbalbabalbalabalbalbalbalbalbabalba</p>
           </div>
         </li>
-      </template>   
+      </template>
+    </ul>
+    <button class="btn-2" id="toggle-speaker">SHOW MORE</button>
+  </section>
+
+  <section class="partners">
+    <h3 id="partners" class="partners-h3">
+      Partner
+    </h3>
+    <hr>
+    <ul class="partners-logos">
+      <li>
+        <div class="logo-1"></div>
+      </li>
+      <li>
+        <div class="logo-2"></div>
+      </li>
+      <li>
+        <div class="logo-3"></div>
+      </li>
+      <li>
+        <div class="logo-4"></div>
+      </li>
+      <li>
+        <div class="logo-5"></div>
+      </li>
     </ul>
   </section>
 
-  <!-- <div class="icon-1"></div> -->
+  <footer>
+    <div class="event-logo"></div>
+    <p class="footer-p"> 2021 Digital arts. None Rigths Reserved </p>
+  </footer>
   <script type="module" src="scripts/main.js"></script>
 </body>
 

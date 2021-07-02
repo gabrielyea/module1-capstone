@@ -204,12 +204,14 @@ header {
     }
   }
 
-  &-container {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-  }
+  .logo-p {
+    @include doTheme($themes) {
+      $font: themed('secondFont');
+      $color : themed('secondTextColor');
 
-  hr {
-    margin: 1em;
+      font-family: $font;
+      color: $color;
+    }
   }
 }
 
@@ -249,6 +251,16 @@ footer {
 }
 
 #nav-desktop-menu {
+  @include doTheme($themes) {
+    $font: themed('secondFont');
+    $text-color-main: themed('secondTextColor');
+
+    font-family: $font;
+    color: $text-color-main;
+  }
+}
+
+.btn-2 {
   @include doTheme($themes) {
     $font: themed('secondFont');
     $text-color-main: themed('secondTextColor');

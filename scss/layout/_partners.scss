@@ -1,0 +1,60 @@
+@use "../utils/" as *;
+
+.home {
+  .partners {
+    display: none;
+  }
+}
+
+.about {
+  .partners {
+    @include flexCenter;
+
+    background-color: $dark-background-color;
+    padding: 1em 0;
+    margin: 0 0 0 0;
+
+    #partners {
+      color: white;
+      text-align: center;
+    }
+
+    ul {
+      @include flexCenter;
+
+      flex-direction: row;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 1em 0.5em;
+    }
+  }
+}
+
+@include desktopResolution {
+  .home,
+  .about {
+    .partners {
+      @include flexCenter;
+
+      background-color: $dark-background-color;
+      padding: 2em 0 5em 0;
+      margin: 0 0 0 0;
+
+      #partners {
+        color: rgba($color: white, $alpha: 0.5);
+        text-align: center;
+        font-size: 2em;
+      }
+
+      ul {
+        @include flexCenter;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+        gap: 1em 3em;
+        margin-top: 2em;
+      }
+    }
+  }
+}

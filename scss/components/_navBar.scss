@@ -1,4 +1,4 @@
-@use '../utils' as *;
+@use '../utils'as *;
 
 nav {
   height: 80px;
@@ -20,35 +20,77 @@ nav {
   #nav-desktop-menu {
     display: none;
   }
+
+  .sub-menu {
+    display: none;
+  }
 }
 
 @include desktopResolution {
   nav {
-    @include flexCenter(row);
+    display: flex;
+    flex-direction: column;
 
-    justify-content: space-around;
-    background-image: none;
-    background-color: white;
-    box-shadow: 2px 2px 5px grey;
-    filter: grayscale(0);
+    .sub-menu {
+      display: block;
+      background-color: $dark-background-color;
+      height: 80px;
 
-    #burger {
-      display: none;
+      .sub-menu-social {
+        list-style: none;
+
+        @include flexCenter(row);
+
+        justify-content: flex-end;
+        gap: 20px;
+        padding: 0.1em 0.5em;
+      }
+
+      .logout {
+        text-decoration: none;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+      }
     }
 
-    #nav-logo {
-      display: block;
-    }
-
-    #nav-desktop-menu {
-      display: block;
-      list-style: none;
-
+    .main-menu {
       @include flexCenter(row);
 
-      li {
-        padding: 1em;
-        font-weight: bold;
+      justify-content: space-between;
+      background-image: none;
+      background-color: white;
+      box-shadow: 2px 2px 5px grey;
+      filter: grayscale(0);
+
+      #burger {
+        display: none;
+      }
+
+      #nav-logo {
+        display: block;
+        margin-left: 10%;
+      }
+
+      #nav-desktop-menu {
+        display: block;
+        list-style: none;
+        margin-right: 10%;
+
+        @include flexCenter(row);
+
+        li {
+          padding: 1em;
+          font-weight: bold;
+
+          & a {
+            text-decoration: none;
+            color: grey;
+
+            &:hover {
+              color: $main-theme-color;
+            }
+          }
+        }
       }
     }
   }

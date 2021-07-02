@@ -9,18 +9,13 @@
   margin: 2em 0 2em 0;
 }
 
-// .burger {
-//   background-image: url(../assets/burger-btn-scaled.png);
-//   width: 64px;
-//   height: 64px;
-// }
-
 hr {
   color: $main-theme-color;
   width: 2em;
-  margin: 1em;
+  margin: 0.5em auto;
   border-bottom: $main-theme-color 2px solid;
   border-top: none;
+  text-align: center;
 }
 
 .burger-container {
@@ -70,5 +65,26 @@ hr {
         transform: translate(0, -8px) rotate(-45deg);
       }
     }
+  }
+}
+
+.btn-2 {
+  background-color: transparent;
+  border: solid rgba(151, 151, 151, 0.5) 2px;
+  margin: 0.5em;
+  padding: 1em;
+  width: 95%;
+  border-radius: 4px;
+}
+
+@include desktopResolution {
+  .btn-1 {
+    background-color: transparent;
+    text-decoration: underline;
+    font-size: 1.5em;
+  }
+
+  .btn-2 {
+    display: none;
   }
 }

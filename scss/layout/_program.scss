@@ -1,17 +1,17 @@
 @use '../utils/'as *;
-@use '../components/' as *;
+@use '../components/'as *;
 
 .program {
   @include flexCenter();
 
   h3 {
-    margin: 1em 0 0.5em 0;
+    margin: 2em 0 0.5em 0;
   }
 
   ul {
     @include flexCenter();
 
-    gap: 1em;
+    gap: 0.2em;
     list-style: none;
     padding: 1em;
     align-items: normal;
@@ -29,6 +29,40 @@
         font-weight: bold;
         color: white;
         padding: 1em;
+      }
+    }
+  }
+}
+
+@include desktopResolution {
+  .program {
+    h3 {
+      font-size: 2em;
+    }
+
+    ul {
+      @include flexCenter(row);
+
+      padding: 0 10%;
+
+      li {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 3fr;
+        align-items: center;
+        justify-items: center;
+        max-width: 300px;
+        min-width: 160px;
+        height: 210px;
+
+        p {
+          text-align: center;
+          font-size: 1em;
+        }
+
+        h4 {
+          font-size: 1.2em;
+          text-align: center;
+        }
       }
     }
   }
