@@ -6,8 +6,10 @@
 > My site is for a pixel artist conference.
 > On the menu you can change the style of the site to reflect the theme. Just tap on stylefy!
 
+# Desktop version screen.
 ![screenshot](./assets/screen-desktop-1.png)
 
+# Mobile version screens, showing both themes.
 ![screenshot](./assets/mobile-screens.png)
 
 
