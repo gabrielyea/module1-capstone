@@ -21,15 +21,6 @@ nav {
     display: none;
   }
 
-  a {
-    text-decoration: none;
-    color: grey;
-
-    &:hover {
-      color: $main-theme-color;
-    }
-  }
-
   .sub-menu {
     display: none;
   }
@@ -90,8 +81,18 @@ nav {
         li {
           padding: 1em;
           font-weight: bold;
+
+          & a {
+            text-decoration: none;
+            color: grey;
+
+            &:hover {
+              color: $main-theme-color;
+            }
+          }
         }
       }
     }
+
   }
 }

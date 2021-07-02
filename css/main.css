@@ -214,13 +214,6 @@ nav #nav-logo {
 nav #nav-desktop-menu {
   display: none;
 }
-nav a {
-  text-decoration: none;
-  color: grey;
-}
-nav a:hover {
-  color: #ea4f36;
-}
 nav .sub-menu {
   display: none;
 }
@@ -280,6 +273,13 @@ nav .sub-menu {
   nav .main-menu #nav-desktop-menu li {
     padding: 1em;
     font-weight: bold;
+  }
+  nav .main-menu #nav-desktop-menu li a {
+    text-decoration: none;
+    color: grey;
+  }
+  nav .main-menu #nav-desktop-menu li a:hover {
+    color: #ea4f36;
   }
 }
 .btn-1 {
