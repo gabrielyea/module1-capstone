@@ -24,6 +24,8 @@ You can see my page live here:
 [Check it out!](https://gabrielyea.github.io/module1-capstone/)
 
 
+## Project video here!
+[Watch my video](https://www.loom.com/share/6a88f0f432694244aa8326badcbdf0db)
 <!--## Getting Started
 
 **This is an example of how you may give instructions on setting up your project locally.**
