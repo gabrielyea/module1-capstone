@@ -12,5 +12,8 @@
   },
   "scripts": {
     "watchsass": "sass --watch scss/main.scss:css/main.css"
+  },
+  "dependencies": {
+    "breakpoint-sass": "^2.7.1"
   }
 }
